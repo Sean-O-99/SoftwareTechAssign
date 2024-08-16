@@ -1,15 +1,15 @@
 # Software Design Document
 
-## Project Name: XXXX
-## Group Number: 001
+## Project Name: Nutrition Information Data Analysis Tool
+## Group Number: 027
 
 ## Team members
 
-| Student Number | Name      | 
-|----------------|-----------|
-| s111111        | Full name |
-| s222222        | Full name | 
-| s333333        | Full name | 
+| Student Number | Name          | 
+|----------------|---------------|
+| s5113175       | Peter Symoniw |
+| s222222        | Full name     | 
+| s333333        | Full name     | 
 
 
 <div style="page-break-after: always;"></div>
@@ -19,15 +19,19 @@
 # Table of Contents
 
 <!-- TOC -->
+* [Software Design Document](#software-design-document)
+  * [Project Name: Nutrition Information Data Analysis Tool](#project-name-nutrition-information-data-analysis-tool)
+  * [Group Number: 027](#group-number-027)
+  * [Team members](#team-members)
 * [Table of Contents](#table-of-contents)
   * [1. System Vision](#1-system-vision)
     * [1.1 Problem Background](#11-problem-background)
     * [1.2 System capabilities/overview](#12-system-capabilitiesoverview)
-    * [1.3	Potential Benefits](#13potential-benefits)
+    * [1.3	Benefit Analysis](#13benefit-analysis)
   * [2. Requirements](#2-requirements)
     * [2.1 User Requirements](#21-user-requirements)
     * [2.2	Software Requirements](#22software-requirements)
-    * [2.3 Use Case Diagrams](#23-use-case-diagrams)
+    * [2.3 Use Case Diagram](#23-use-case-diagram)
     * [2.4 Use Cases](#24-use-cases)
   * [3.	Software Design and System Components](#3-software-design-and-system-components-)
     * [3.1	Software Design](#31software-design)
@@ -35,6 +39,7 @@
       * [3.2.1 Functions](#321-functions)
       * [3.2.2 Data Structures / Data Sources](#322-data-structures--data-sources)
       * [3.2.3 Detailed Design](#323-detailed-design)
+      * [3.2.4 Test Entry](#324-test-entry)
   * [4. User Interface Design](#4-user-interface-design)
     * [4.1 Structural Design](#41-structural-design)
     * [4.2	Visual Design](#42visual-design)
@@ -126,6 +131,9 @@ List all data structures or sources used in the software. For each, provide:
 
 #### 3.2.3 Detailed Design
 Provide pseudocode or flowcharts for all functions listed in Section 3.2.1 that operate on data structures. For instance, include pseudocode or a flowchart for a custom searching function.
+
+#### 3.2.4 Test Entry
+This is a test.
 
 
 ## 4. User Interface Design
