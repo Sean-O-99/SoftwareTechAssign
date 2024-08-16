@@ -39,3 +39,20 @@ Additional Notes:
 - make sure to create a local branch and switch to it before working on changes to get in the habit
 
 ---
+
+<br>
+
+---
+
+Name: Sean
+
+Date: 16/08/24
+
+Entry Info:
+- Updated names of team members in Project Plan.md
+
+Additional Notes:
+
+- Need to add student numbers for Peter and Sipa
+
+---
