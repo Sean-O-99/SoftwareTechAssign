@@ -3,6 +3,8 @@
 
 Log Template:
 
+<br>
+
 ---
 
 Name:
@@ -54,5 +56,22 @@ Entry Info:
 Additional Notes:
 
 - Need to add student numbers for Peter and Sipa
+
+---
+
+<br>
+
+---
+
+Name: Peter
+
+Date: 16/08/2024
+
+Entry Info:
+- added student number, git account, group no., project name to project plan
+
+Additional Notes:
+
+- 
 
 ---

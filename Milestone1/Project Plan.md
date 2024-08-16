@@ -1,14 +1,14 @@
 # Project Plan
 
-## Project Name: XXXX
-## Group Number: 001
+## Project Name: Nutrition Information Data Analysis Tool
+## Group Number: 027
 
 ### Team members
 
 | Student No. | Full Name      | GitHub Username | Contribution (sum to 100%) | 
 |-------------|----------------|-----------------|----------------------------|
 | s5094725    | Sean O'Sullivan | xxx             | 33.3% or Equal             |
-| s222222     | Peter Symoniw  | xxx             | 33.3% or Equal             | 
+| s5113175    | Peter Symoniw  | ptrsym          | 33.3% or Equal             | 
 | s333333     | Sipa Sunuware  | xxx             | 33.3% or Equal             | 
 
 ### Brief Description of Contribution
