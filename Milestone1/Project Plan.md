@@ -65,9 +65,26 @@ Define the activities required for your project based on the WBS, and assign res
 
 | Activity #No | Activity Name | Brief Description | Duration | Responsible Team Members |
 |--------------|---------------|-------------------|----------|--------------------------|
-| xxx          | xxx           | xxx               | xxx      | xxx \& yyy               |
-| xxxx         | xxx           | xxx               | xxx      | All                      |
-| xxxx         | xxx           | xxx               | xxx      | xxx                      |
+| 1          | Develop Project Overview           |<ul><li>Identify project objectives and scope <li>Identify stakeholders </ul>             | 1 day      | Sean               |
+| 2         | Develop Communication Plan           | <ul><li>Establish standards for communication within the team <li>Choose platform for communication</ul>              | xxx      | All                      |
+| 3         | Develop System Vision           | <ul><li>Define system capabilities <li>Identify target users <li>Evaluate benefits </ul>               | xxx      | Sean                      |
+| 4         | Develop WBS and Schedule           | <ul><li>Break down project into tasks <li>Estimate durations <li>Create a project schedule               | xxx      | Sipa & Peter                      |
+| 5         | Define System Architecture           | <ul><li>Define the software architecture and system requirements</ul>               | xxx      | All                      |
+| 6         | Define requirements           | <ul><li>Identify user and software requirements</ul>               | xxx      | Sipa                      |
+| 7         | Develop Wireframes and Mockups           | <ul><li>Design the wireframes and mockups for the user interface</ul>               | xxx      | Peter                      |
+| 8         | Implement Food Search Feature           | <ul><li>Develop the functionality that allows users to search for food items in the system</ul>               | xxx      | All                      |
+| 9         | Implement Nutrition Breakdown Feature           | <ul><li>Develop the functionality that provides users with detailed nutritional information about the food items</ul>               | xxx      | All                      |
+| 10         | Implement Nutrition Range Filter Feature           | <ul><li>Develop the feature that allows users to filter food items based on custom nutritional ranges</ul>               | xxx      | All                      |
+| 11         | Implement Nutrition Level Filter Feature           | <ul><li>Develop the functionality that allows users to search for food items based on predefined nutritional levels</ul>               | xxx      | All                      |
+| 12         | Implement Nutrition Tracker Feature(?) TBD           | <ul><li>TBD</ul>               | xxx      | All                      |
+| 13         | Unit Testing           | <ul><li>Perform testing on individual components</ul>               | xxx      | All                      |
+| 14         | User Acceptance Testing           | <ul><li>Conduct testing with users to ensure system meets their needs and requirements <li>Collect and incorporate user feedback</ul>               | xxx      | All                      |
+| 15         | Project Monitoring           | <ul><li>Track project progress against plan to ensure it stays on schedule</ul>               | xxx      | All                      |
+| 16         | Performance Measurement           | <ul><li>Assess the performance of the project against defined metrics</ul>               | xxx      | All                      |
+| 17         | Change Management           | <ul><li>Manage and document any changes to the project's scope or schedule</ul>               | xxx      | All                      |
+| 18         | Final performance review           | <ul><li>Conduct a final evaluation of project performance <li>Document lessons learned</ul>               | xxx      | All                      |
+| 19         | Project closure           | <ul><li>Complete final documentation and tasks <li> Formally close the project</ul>               | xxx      | All                      |
+
 
 ## 4. Gantt Chart
 You have to use the provided Gantt chart template.  
