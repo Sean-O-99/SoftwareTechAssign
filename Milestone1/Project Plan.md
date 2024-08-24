@@ -14,12 +14,12 @@
 ### Brief Description of Contribution
 
 Please Describe what you have accomplished in this group project.
-- s111111, Full name:
-  - Accomplishments: Describe what you have completed or achieved
-- s222222, Full name
-  - Accomplishments: Describe what you have completed or achieved
-- s333333, full name
-  - Accomplishments: Describe what you have completed or achieved
+- s111111, Sean lastname:
+  - Project Overview, Design Document - System Vision, 
+- s222222, Sipa lastname:
+  - WBS, Activity Definition Estimations, Gantt Chart, Design Document - Requirements,
+- s5113175, Peter Symoniw:
+  - WBS, Activity Definition Estimations, Gantt Chart, Design Document - UI Design
 
 <div style="page-break-after: always;"></div>
 

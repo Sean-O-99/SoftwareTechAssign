@@ -75,3 +75,20 @@ Additional Notes:
 - 
 
 ---
+
+<br>
+
+---
+
+Name: Peter
+
+Date: 24/08/2024
+
+Entry Info:
+- added work delegations under the contributions for the project plan as discussed in 24/08/2024 meeting.
+
+Additional Notes: make sure to update your student information in appropriate places.
+
+- 
+
+---
