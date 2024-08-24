@@ -9,14 +9,14 @@
 |-------------|----------------|-----------------|----------------------------|
 | s5094725    | Sean O'Sullivan | xxx             | 33.3% or Equal             |
 | s5113175    | Peter Symoniw  | ptrsym          | 33.3% or Equal             | 
-| s333333     | Sipa Sunuware  | xxx             | 33.3% or Equal             | 
+| S5291335     | Sipa Sunuwar  | sipaswr             | 33.3% or Equal             | 
 
 ### Brief Description of Contribution
 
 Please Describe what you have accomplished in this group project.
 - s111111, Sean lastname:
   - Project Overview, Design Document - System Vision, 
-- s222222, Sipa lastname:
+- s5291335, Sipa Sunuwar:
   - WBS, Activity Definition Estimations, Gantt Chart, Design Document - Requirements,
 - s5113175, Peter Symoniw:
   - WBS, Activity Definition Estimations, Gantt Chart, Design Document - UI Design
@@ -57,9 +57,7 @@ Define and manage what is included or excluded in the project and product.
 
 ## 2. Work Breakdown Structure
 
-Include the Work Breakdown Structure (WBS) for the entire project. WBS should be presented as a hierarchical diagram. Use the elements from the WBS to define activities in Section 3, and schedule these activities in the Gantt Chart in Section 4. Ensure all project activities are considered and included in the WBS.
-
-![WBS](./WBS.jpg)
+![WBS](Work%20breakdown%20Structure/WBS.png)
 
 ## 3. Activity Definition Estimation
 

@@ -92,3 +92,15 @@ Additional Notes: make sure to update your student information in appropriate pl
 - 
 
 ---
+
+Name: Sipa
+
+Date: 24/08/2024
+
+Entry Info:
+- updated my student information
+- added first draft of WBS
+
+- 
+
+---

@@ -9,7 +9,7 @@
 |----------------|---------------|
 | s5113175       | Peter Symoniw |
 | s222222        | Full name     | 
-| s333333        | Full name     | 
+| s5291335        | Sipa Sunuwar     | 
 
 
 <div style="page-break-after: always;"></div>
