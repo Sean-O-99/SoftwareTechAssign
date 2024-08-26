@@ -7,14 +7,14 @@
 
 | Student No. | Full Name      | GitHub Username | Contribution (sum to 100%) | 
 |-------------|----------------|-----------------|----------------------------|
-| s5094725    | Sean O'Sullivan | xxx             | 33.3% or Equal             |
+| s5094725    | Sean O'Sullivan | Sean-O-99       | 33.3% or Equal             |
 | s5113175    | Peter Symoniw  | ptrsym          | 33.3% or Equal             | 
-| S5291335     | Sipa Sunuwar  | sipaswr             | 33.3% or Equal             | 
+| S5291335     | Sipa Sunuwar  | sipaswr         | 33.3% or Equal             | 
 
 ### Brief Description of Contribution
 
 Please Describe what you have accomplished in this group project.
-- s111111, Sean lastname:
+- s5094725, Sean O'Sullivan:
   - Project Overview, Design Document - System Vision, 
 - s5291335, Sipa Sunuwar:
   - WBS, Activity Definition Estimations, Gantt Chart, Design Document - Requirements,
@@ -47,9 +47,23 @@ Please Describe what you have accomplished in this group project.
 
 Establish objectives or goals that the project aims to achieve.
 
+The aim of this project is to develop an application for desktop devices that allows the analysis and visualisation of various foods nutritional values. In turn, end users will be able to utilise this software to easily identify how nutrient rich their food is. To ensure the successful completion of the project a plan must be developed, milestones set and followed.
 ### 1.2 Project Stakeholders
 
 Identify all key stakeholders involved in the project, including internal teams and potential end-users.
+
+There are many stakeholders involved in this project, and they can be classified as either internal or external. To be classed as an internal stakeholder one must be a part of the company that is delivering the application. Whereas, external stakeholders are people that will be using the software that are not part of the organisation that made it.
+
+
+| Role                 | Classification | Brief Description                                                                                                                           |
+|----------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| Company Executives   | Internal       | The executive of this company has given the green light to initialise the development of the nutrition visualiser software.                 |
+| Project Manager      | Internal       | Develops the project plan for the nutrition visualiser software and coordinates the development process to ensure milestones are reached on schedule. |
+| UX Designer          | Internal       | Designs the layout for nutrition visualiser application and follows best practices for ease of use, accessibility and memorability.         |
+| Programmer           | Internal       | Codes the nutrition visualiser application following the software's design plans as closely as possible.                                    |
+| Casual end-users     | External       | Uses the nutrition visualiser software for looking up certain food items occasionally.                                                      |
+| Consistent end-users | External       | Uses the nutrition visualiser software for tracking all food items.                                                                         |
+
 
 ### 1.3 Project Scope
 

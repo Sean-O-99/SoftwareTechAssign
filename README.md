@@ -93,6 +93,10 @@ Additional Notes: make sure to update your student information in appropriate pl
 
 ---
 
+<br>
+
+---
+
 Name: Sipa
 
 Date: 24/08/2024
@@ -104,3 +108,14 @@ Entry Info:
 - 
 
 ---
+
+<br>
+
+---
+
+Name: Sean
+
+Date: 26/08/2024
+
+Entry Info:
+- added first draft of 1.1 Project Objectives and 1.2 Project Stakeholders
