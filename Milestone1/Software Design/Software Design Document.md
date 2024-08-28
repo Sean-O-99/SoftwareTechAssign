@@ -71,19 +71,95 @@ How will this system provide value or benefit?
 ## 2. Requirements
 
 ### 2.1 User Requirements
+Users of the system are likely to be individuals who are health-conscious and interested in managing their diet by making informed food choices based on nutritional information. The system must be user-friendly, offering simple navigation and clear presentation of nutritional data. 
 
-Detail how users are expected to interact with or use the program. What functionalities must the system provide from the end-user perspective? This can include both narrative descriptions and a listing of user needs.
+#### Core User Requirements
+1.	Food search
+* Users enter a food item into search bar and system will display the results to match the search query. Each result will display their nutritional information like caloric value, fat content, etc.
+* System should be able to present search results using general or broad terms.
+* Example: 
+  * User searches cheese.
+  * System displays all food items with ‘cheese’ like goat cheese, cheddar cheese, cream cheese.
+  * User can select the specific food item.
+  * Nutritional information of selected item is displayed.
 
-Note: Since no specific client or user is assigned, you may create a fictional user. Who do you envision using your software?
+2.	Nutrition breakdown
+* System should display detailed nutritional information for food items.
+* Information must be presented in a clear way using visual elements like pie charts and bar graphs to facilitate better understanding.
+
+3.	Nutrition range filter
+* Users should be able to select a nutrient (e.g. fat, sugar) and input minimum and maximum values (e.g. 5g to 15g).
+* When filters are applied, the system should display a list of foods that fall within the specified range.
+
+4.	Nutrition level filter
+* Users should be able to select one of several nutrients and choose a level (low, mid, high) based on predefined thresholds.
+* The levels are defined as:
+  * Low: Less than 33% of the highest value.
+  * Mid: Between 33% and 66% of the highest value.
+  * High: Greater than 66% of the highest value.
+
+5.	Additional feature: Nutritional tracker(?)
+
+#### Fictional User Profile:
+**Name:** Alex Li\
+**Occupation:** Student\
+**Age:** 22\
+**Comments:** Fitness enthusiast, tech-savvy\
+**Goals:** Find healthy food options, keep track of his nutritional intake to maintain a balanced diet.Looking for low sugar, high protein diet.
+
+**Expected flow of events:**
+1. Alex opens the application.
+2. Food Search:
+- The system displays a list of food items, but Alex is looking for a specific dietary criteria.
+3. Apply nutrition range filters:
+- Alex chooses ‘sugar’ as the nutrient to filter.
+- Alex sets the maximum ‘sugar’ to be ‘5g’.
+- The system updates the list to show food items that fall within this low sugar range.
+4. Apply nutrition level filter:
+- Alex selects “protein” as the nutrient to filter.
+- The system then updates the list again to show food items that meet both criteria: 
+  - low in sugar (up to 5g)
+  - high in protein
+- This allows Alex to make informed decisions about his diet.
 
 ### 2.2	Software Requirements
-Define the functionality the software will provide. This section should list requirements formally, often using the word "shall" to describe functionalities.
+This section provides a detailed overview of the capabilities and features of the software. It defines what the system should do and how it should perform. It covers the functional requirements, which refer to specific tasks and functions the software must perform, and non-functional requirements, which refer to the performance standards to perform efficiently.
 
-Example Functional Requirements:  
-- R1.1 The program shall accept multiple file names as arguments from the command line.  
-- R1.2 Each file name can be a simple file name or include the full path of the file with one or more levels.  
+#### Functional Requirements
+1.	Food Search Functionality
+  - R1.1 The system shall allow users to enter a food item into a search bar.
+  - R1.2 The system shall display a list of food items matching the search query.
+  - R1.3 Each search result shall include nutritional information such as caloric value, fat content, etc.
+  - R1.4 The system shall allow users to select a food item from the search results to view detailed nutritional information.
+2.	Nutrition Breakdown
+  - R2.1 The system shall display a detailed view of nutritional information upon
+  - R2.2 The detailed view shall use pie charts and bar graphs to represent different nutrients such as fats, carbohydrates, and proteins.
+3.	Nutrition Range Filter
+  - R3.1 The system shall provide a feature to select a nutrient (e.g. fat, sugar).
+  - R3.2 The system shall allow users to input a desired range (e.g. 5g to 15g) for the selected nutrient.
+  - R3.3 The system shall display a list of food items that fall within the specified nutrient range.
+4.	Nutrition Level Filter
+  - R4.1 The system shall allow users to select a nutrient (e.g. protein) and choose a level (low, mid, high).
+  - R4.2 The system shall filter the database based on predefined thresholds for each nutritional level.
+  - R4.3 The system shall display a list of foods categorized into the selected nutrient levels (low, mid, high).
+5.	Additional Feature: (TBD)
+  - 
 
-- etc …
+#### Non-Functional Requirements
+1.	Performance
+  - N1.1 The system shall respond to search queries within 2 seconds.
+  - N1.2 The system shall display detailed nutritional information within 3 seconds of selecting a food item.
+2.	Usability
+  - N2.1 The system shall provide a user-friendly interface with intuitive navigation.
+  - N2.2 The system shall include clear labels and a logical flow to facilitate easy use.
+3.	Scalability
+  - N3.1 The system shall handle up to 10,000 food items without performance degradation.
+  - N3.2 The system shall allow for future expansion of nutritional data without requiring significant modifications.
+  - N3.3 The system shall handle up to 5,000 simultaneous user sessions during peak hours.
+4.	Security
+  - N4.1 The system shall protect user data from unauthorized access.
+  - N4.2 The system shall implement secure data storage and transmission protocols.
+
 
 ### 2.3 Use Case Diagram
 Provide a system-level Use Case Diagram illustrating all required features.
@@ -92,17 +168,69 @@ Example:
 ![Use Case Diagram](./UCD.png)
 
 ### 2.4 Use Cases
-Include at least 5 use cases, each corresponding to a specific function.
 
-
-| Use Case ID    | xxx  |
+| User Case ID   | 1  |
 |----------------|------|
-| Use Case Name  | xxxx |
-| Actors         | xxxx |
-| Description    | xxxx |
-| Flow of Events | xxxx |
-| Alternate Flow | xxxx |
+| Use Case Name  | Food Search |
+| Actors         | User |
+| Description    | User can search for food items by entering a keyword into the search bar. |
+| Flow of Events | 1. User enters a search term into the search bar.
+|                | 2. System processes the search request.
+|                | 3. System displays a list of food items that match the search.
+|                | 4. User selects a food item from the results to view the nutritional information about it. |
+| Alternate Flow | 1. If no matching items are found, system displays message to inform users that no results were found.
+|                | 2. User can modify their search term and try again. |
 
+
+
+
+
+
+| User Case ID   | 2  |
+|----------------|------|
+| Use Case Name  | Nutritional Breakdown |
+| Actors         | User |
+| Description    | User can view nutritional information for a selected food item. |
+| Flow of Events | 1. User selects a food item from the search results. |
+|                | 2. System retrieves the nutritional information for selected food item. |
+|                | 3. System displays detailed nutritional information. |
+| Alternate Flow | 1. If nutritional information is not available, the system will display a message indicating the details are not available.
+|                | 2.  Users can return to search results to select another item. |
+
+
+
+
+| User Case ID     | 3  |
+|------------------|------|
+| Use Case Name    | Nutrition Range Filter |
+| Actors           | User |
+| Description      | Users can filter food items based on their desired range for any one of the nutrition.  |
+| Flow of Events   | 1. User sets a nutritional range filter (e.g. 10g fat). |
+|                  | 2. System applies the filter to the list of food items. |
+|                  | 3. System displays the filtered list of food items that meet the range set by user. |
+|                  | 4. User reviews the filtered list. |
+| Alternate Flow   | 1. If no food items meet the filter set by user, the system displays a message indicating that no results were found. |
+|                  | 2. User can adjust the filter and try again. |
+
+| User Case ID     | 4  |
+|------------------|------|
+| Use Case Name    | Nutrition Level Filter |
+| Actors           | User |
+| Description      | Users can filter food items based on the predefined nutritional content levels (low, mid, and high) for one of the following nutrient: `fat`, `protein`, `carbohydrates`, `sugar`, or `nutritional density`. |
+| Flow of Events   | 1. User selects a nutritional level filter option. |
+|                  | 2. System applies the nutritional level filter to the list of food items. |
+|                  | 3. System displays the filtered list of food items that meet the nutritional level set by user. |
+|                  | 4. User reviews the list. |
+| Alternate Flow   | 1. If no food items meet the filters set by the user, the system displays a message indicating that no results were found. |
+|                  | 2. Users can then readjust the filter. |
+
+| User Case ID   | 5  |
+|----------------|------|
+| Use Case Name  | TBD |
+| Actors         |  |
+| Description    |  |
+| Flow of Events |  |
+| Alternate Flow |  |
 
 
 ## 3.	Software Design and System Components 
