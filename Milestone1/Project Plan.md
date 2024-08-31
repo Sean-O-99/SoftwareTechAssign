@@ -71,33 +71,45 @@ Define and manage what is included or excluded in the project and product.
 
 ## 2. Work Breakdown Structure
 
-![WBS](Work%20breakdown%20Structure/WBS.png)
-
+![WBS](./Work%20Breakdown%20Structure/WBS-2.png)
 ## 3. Activity Definition Estimation
 
 Define the activities required for your project based on the WBS, and assign responsibilities to team members. Each activity should be numbered and correspond with your Gantt chart. Provide estimated durations for each activity to facilitate Gantt chart preparation.
 
-| Activity #No | Activity Name | Brief Description | Duration | Responsible Team Members |
-|--------------|---------------|-------------------|----------|--------------------------|
-| 1          | Develop Project Overview           |<ul><li>Identify project objectives and scope <li>Identify stakeholders </ul>             | 1 day      | Sean               |
-| 2         | Develop Communication Plan           | <ul><li>Establish standards for communication within the team <li>Choose platform for communication</ul>              | xxx      | All                      |
-| 3         | Develop System Vision           | <ul><li>Define system capabilities <li>Identify target users <li>Evaluate benefits </ul>               | xxx      | Sean                      |
-| 4         | Develop WBS and Schedule           | <ul><li>Break down project into tasks <li>Estimate durations <li>Create a project schedule               | xxx      | Sipa & Peter                      |
-| 5         | Define System Architecture           | <ul><li>Define the software architecture and system requirements</ul>               | xxx      | All                      |
-| 6         | Define requirements           | <ul><li>Identify user and software requirements</ul>               | xxx      | Sipa                      |
-| 7         | Develop Wireframes and Mockups           | <ul><li>Design the wireframes and mockups for the user interface</ul>               | xxx      | Peter                      |
-| 8         | Implement Food Search Feature           | <ul><li>Develop the functionality that allows users to search for food items in the system</ul>               | xxx      | All                      |
-| 9         | Implement Nutrition Breakdown Feature           | <ul><li>Develop the functionality that provides users with detailed nutritional information about the food items</ul>               | xxx      | All                      |
-| 10         | Implement Nutrition Range Filter Feature           | <ul><li>Develop the feature that allows users to filter food items based on custom nutritional ranges</ul>               | xxx      | All                      |
-| 11         | Implement Nutrition Level Filter Feature           | <ul><li>Develop the functionality that allows users to search for food items based on predefined nutritional levels</ul>               | xxx      | All                      |
-| 12         | Implement Nutrition Tracker Feature(?) TBD           | <ul><li>TBD</ul>               | xxx      | All                      |
-| 13         | Unit Testing           | <ul><li>Perform testing on individual components</ul>               | xxx      | All                      |
-| 14         | User Acceptance Testing           | <ul><li>Conduct testing with users to ensure system meets their needs and requirements <li>Collect and incorporate user feedback</ul>               | xxx      | All                      |
-| 15         | Project Monitoring           | <ul><li>Track project progress against plan to ensure it stays on schedule</ul>               | xxx      | All                      |
-| 16         | Performance Measurement           | <ul><li>Assess the performance of the project against defined metrics</ul>               | xxx      | All                      |
-| 17         | Change Management           | <ul><li>Manage and document any changes to the project's scope or schedule</ul>               | xxx      | All                      |
-| 18         | Final performance review           | <ul><li>Conduct a final evaluation of project performance <li>Document lessons learned</ul>               | xxx      | All                      |
-| 19         | Project closure           | <ul><li>Complete final documentation and tasks <li> Formally close the project</ul>               | xxx      | All                      |
+| Activity #No | Activity Name                              | Brief Description                                                                                                                     | Duration         | Responsible Team Members |
+|--------------|--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------|------------------|--------------------------|
+| 1            | Initiating                                 |                                                                                                                                       |
+| 1.1          | Develop Project Overview                   | <ul><li>Identify project goals, objectives and scope <li>Identify stakeholders </ul>                                                  | 1 days           | Sean                     |
+| 1.2          | Develop Communication Plan                 | <ul><li>Establish standards for communication within the team <li>Choose platform for communication</ul>                              | 1 days           | All                      |
+| 2            | Planning                                   |
+| 2.1          | Develop System Vision Document             | <ul><li>Document the vision and high-level goals of the system </ul>                                                                  | 2 days           | Sean                     |
+| 2.2          | Establish WBS and Schedule                 | <ul><li>Define system capabilities <li>Create a WBS and projec timline <li>Evaluate benefits </ul>                                    | 2 days           | Sipa & Peter             |
+| 2.3          | Define Project Requirements                | <ul><li>Gather and document project requirements <li>Estimate durations <li>Create a project schedule                                 | 2  days          | Sipa                     |
+| 2.4          | Define System Architecture                 | <ul><li>Design the software architecture </ul>                                                                                        | 2 days           | All                      |
+| 2.5          | Design UI Wireframes and Mockups           | <ul><li>Create visual representations of user interface</ul>                                                                          | 2 days           | Peter                    |
+| 3            | Execution                                  |                                                                                                                                       |
+| 3.1          | Implement Food Search Feature              | <ul><li>Develop the functionality that allows users to search for food items in the system</ul>                                       | 2 days           | All                      |
+| 3.2          | Implement Nutrition Breakdown Feature      | <ul><li>Develop the functionality that provides users with detailed nutritional information about the food items</ul>                 | 2 days           | All                      |
+| 3.3          | Implement Nutrition Range Filter Feature   | <ul><li>Develop the feature that allows users to filter food items based on custom nutritional ranges</ul>                            | 2 days           | All                      |
+| 3.4          | Implement Nutrition Level Filter Feature   | <ul><li>Develop the functionality that allows users to search for food items based on predefined nutritional levels</ul>              | 2 days           | All                      |
+| 3.5          | Implement Nutrition Tracker Feature(?) TBD | <ul><li>TBD</ul>                                                                                                                      | 3 days           | All                      |
+| 3.6          | Testing                                    |                                                                                                                                       |
+| 3.6.1        | Unit Testing                               | <ul><li>Perform testing on individual components</ul>                                                                                 | 1 days           | All                      |
+| 3.6.2        | User Acceptance Testing                    | <ul><li>Conduct testing with users to ensure system meets their needs and requirements <li>Collect and incorporate user feedback</ul> | 2 days           | All                      |
+| 4            | Controlling                                |                                                                                                                                       |
+| 4.1          | Project Monitoring                         | <ul><li>Track project progress against plan to ensure it stays on schedule</ul>                                                       | ongoing          | All                      |
+| 4.1.1        | Weekly Team Check-In                       | <ul><li>Regular meetings to discuss progress</ul>                                                                                     | 0.5 days ongoing | All                      |
+| 4.1.2        | Document Meeting Outcome                   | <ul><li>Record what was discussed and decided</ul>                                                                                    | during meetings  | All                      |
+| 4.2          | Performance Measurement                    | <ul><li>Assess the performance of the project against defined metrics</ul>                                                            | during meetings  | All                      |
+| 4.2.1        | Task Tracking                              | <ul><li>Monitor the progress of tasks by updating the gantt chart</ul>                                                                | ongoing          | All                      |
+| 4.2.2        | Quality Checking                           | <ul><li>Ensure quality meets required standards</ul>                                                                                  | during meetings  | All                      |
+| 4.3          | Change Management                          | <ul><li>Manage and document any changes to the project's scope or schedule from reviews and feedback</ul>                             | during meetings  | All                      |
+| 4.3.1        | Change Discussion                          | <ul><li>Discuss pending or proposed changes</ul>                                                                                      | during meetings  | All                      |
+| 4.3.2        | Change Implementation                      | <ul><li>Implement the approved changes</ul>                                                                                           | 1 day            | All                      |
+| 5            | Closing                                    |                                                                                                                                       |
+| 5.1          | Documentation                              | <ul><li>Compile project documentation</ul>                                                                                            | 2 days           | All                      |
+| 5.2          | Final performance review                   | <ul><li>Conduct a final evaluation of project performance <li>Document lessons learned</ul>                                           | 0.5 days         | All                      |
+| 5.3          | Project closure                            | <ul><li>Complete final tasks <li> Formally close the project</ul>                                                                     | 1 days           | All                      |
 
 
 ## 4. Gantt Chart

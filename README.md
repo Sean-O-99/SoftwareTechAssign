@@ -119,3 +119,41 @@ Date: 26/08/2024
 
 Entry Info:
 - added first draft of 1.1 Project Objectives and 1.2 Project Stakeholders
+
+---
+
+<br>
+
+---
+
+Name: Peter
+
+Date: 31/08/2024
+
+Entry Info:
+- Adjusting WBS tasks
+- Recording suggestions for additional feature
+
+Additional Notes:
+
+1. Recipe Builder
+
+- Description: Allow users to select multiple foods and create a simple recipe by summing up their nutritional values. This feature could help users quickly see the total nutritional content of a meal made up of selected foods.
+- How It Works:
+Users select multiple foods from a list or search results.
+The tool calculates the total calories, macronutrients (protein, fats, carbs), and any other relevant nutrients (e.g., fiber, vitamins) for the combination of selected foods.
+Users can name and save the recipe for future reference.
+- Example:
+User Action: Select "Chicken breast, Brown rice, Spinach."
+Output: The tool shows "Total: 450 kcal, 35g protein, 50g carbs, 10g fat" and allows users to save this combination as "Chicken and Rice Bowl."
+2. Food Comparison Tool
+
+- Description: Enable users to compare the nutritional content of two or more foods side by side, helping them make more informed decisions about which food to choose.
+- How It Works:
+Users select two or more foods to compare.
+The tool displays the nutritional values of each food in a table, allowing users to see differences in calories, macronutrients, vitamins, minerals, etc.
+- Optional: Highlight significant differences (e.g., one food is much higher in protein).
+
+---
+
+<br>
