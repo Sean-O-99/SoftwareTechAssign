@@ -157,3 +157,24 @@ The tool displays the nutritional values of each food in a table, allowing users
 ---
 
 <br>
+
+---
+
+Name: Peter
+
+Date: 31/08/2024
+
+Entry Info:
+- Updated activity estimation
+- Updated gantt chart
+
+Additional Notes:
+
+- Check the time estimates if they seem reasonable
+- Make sure to update your progress on the gantt chart and fix initial dates
+- Could find no way to express a weekly meeting in the gantt chart so ongoing tasks span most of the project duration
+- Project start was taken from Meeting 2 date and phase 2 was estimated 4 weeks starting from the monday after phase 1 was due.
+
+---
+
+<br>
