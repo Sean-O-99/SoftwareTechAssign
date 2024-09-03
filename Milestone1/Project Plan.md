@@ -47,27 +47,33 @@ Please Describe what you have accomplished in this group project.
 
 Establish objectives or goals that the project aims to achieve.
 
-The aim of this project is to develop an application for desktop devices that allows the analysis and visualisation of various foods nutritional values. In turn, end users will be able to utilise this software to easily identify how nutrient rich their food is. To ensure the successful completion of the project a plan must be developed, milestones set and followed.
+The aim of this project is to develop an application for desktop devices that allows the analysis and visualisation of various foods nutritional values. In turn, end users will be able to utilise this software to easily identify how nutrient rich their food is. To ensure the successful completion of the nutrition visualiser project a plan must be developed, and milestones set and followed.
+
+The project will be completed in multiple stages, with various tasks or processes allocated to each stage. Accordingly, the stages are referred to as process groups and there will be five in total: Initiating, Planning, Execution, Controlling, and Closing. Completing each process group in full will allow the project to run as smoothly as possible and an on-time delivery of the nutrition visualiser software.
+
 ### 1.2 Project Stakeholders
 
 Identify all key stakeholders involved in the project, including internal teams and potential end-users.
 
-There are many stakeholders involved in this project, and they can be classified as either internal or external. To be classed as an internal stakeholder one must be a part of the company that is delivering the application. Whereas, external stakeholders are people that will be using the software that are not part of the organisation that made it.
+There are many stakeholders involved in this project, and they can be classified as either internal or external. To be classed as an internal stakeholder one must be a part of the company that is delivering the application. Whereas external stakeholders are people that are outside the organisation that are participating in the project, or potential end users of the software that are not a part of the organisation that made it.
 
-
-| Role                 | Classification | Brief Description                                                                                                                           |
-|----------------------|----------------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| Company Executives   | Internal       | The executive of this company has given the green light to initialise the development of the nutrition visualiser software.                 |
+| Role                 | Classification | Brief Description                                                                                                                                     |
+|----------------------|----------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Company Executives   | Internal       | The executive of this company has given the green light to initialise the development of the nutrition visualiser software.                           |
 | Project Manager      | Internal       | Develops the project plan for the nutrition visualiser software and coordinates the development process to ensure milestones are reached on schedule. |
-| UX Designer          | Internal       | Designs the layout for nutrition visualiser application and follows best practices for ease of use, accessibility and memorability.         |
-| Programmer           | Internal       | Codes the nutrition visualiser application following the software's design plans as closely as possible.                                    |
-| Casual end-users     | External       | Uses the nutrition visualiser software for looking up certain food items occasionally.                                                      |
-| Consistent end-users | External       | Uses the nutrition visualiser software for tracking all food items.                                                                         |
+| UX Designer          | Internal       | Designs the layout for nutrition visualiser application and follows best practices for ease of use, accessibility and memorability.                   |
+| Programmer           | Internal       | Codes the nutrition visualiser application following the software's design plans as closely as possible.                                              |
+| Casual end-users     | External       | Uses the nutrition visualiser software for looking up certain food items occasionally.                                                                |
+| Consistent end-users | External       | Uses the nutrition visualiser software for tracking all food items and uses models to determine food consumption.                                     |
 
 
 ### 1.3 Project Scope
 
-Define and manage what is included or excluded in the project and product.
+The nutrition visualiser software will be a desktop application that allows data analysis and visualisation of a food nutrition database through a graphical user interface. Detailed nutritional information for a wide variety of commonly consumed foods from around the world will be stored in the associated database.
+
+The end user will be able to easily search through the database and create various models related to the selected foods nutritional value. Additionally, the nutrition visualiser application will be responsive with fast loading times and an intuitive GUI. It will also feature a function where the user can keep track of their daily or weekly food consumption and generate associated nutritional models from it.
+
+The deliverables of this project will include the completed nutritional visualiser software, with attached documentation of the design and development process of the application.The project and software will be deemed a success if the functional and non-functional requirements listed above are integrated effectively and on schedule.
 
 ## 2. Work Breakdown Structure
 

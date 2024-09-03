@@ -178,3 +178,20 @@ Additional Notes:
 ---
 
 <br>
+
+---
+
+Name: Sean
+
+Date: 03/09/2024
+
+Entry Info:
+- Added more to section 1.1 and completed draft for section 1.3.
+
+Additional Notes:
+
+- An idea for the custom feature is a daily or weekly food consumption tracker, that allows the user to see a culmination of the foods nutritional value and create models related to them.
+
+---
+
+<br>
