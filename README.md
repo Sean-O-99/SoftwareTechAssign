@@ -186,7 +186,7 @@ Name: Sean
 Date: 03/09/2024
 
 Entry Info:
-- Added more to section 1.1 and completed draft for section 1.3.
+- Added more to section 1.1 and completed draft for section 1.3 on project plan.
 
 Additional Notes:
 
@@ -195,3 +195,18 @@ Additional Notes:
 ---
 
 <br>
+
+---
+
+Name: Sean
+
+Date: 06/09/2024
+
+Entry Info:
+- Added sections 1.1, 1.2 and 1.3 in the Software Design Document.
+
+Additional Notes:
+
+- forgot to add this to the original push.
+
+---
