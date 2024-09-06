@@ -5,11 +5,11 @@
 
 ## Team members
 
-| Student Number | Name          | 
-|----------------|---------------|
-| s5113175       | Peter Symoniw |
-| s222222        | Full name     | 
-| s5291335        | Sipa Sunuwar     | 
+| Student Number | Name            | 
+|----------------|-----------------|
+| s5113175       | Peter Symoniw   |
+| s5094725       | Sean O'Sullivan | 
+| s5291335       | Sipa Sunuwar    | 
 
 
 <div style="page-break-after: always;"></div>
@@ -59,14 +59,28 @@
 - Data Input/Output: What kind of data input and output is required?
 - Target Users: Who will use the system, and why?
 
+The nutrition visualiser software aims to enhance end users health and eating habits by allowing them to see and visualise the nutrients of foods they consume. It will give them all the important information they need to know in a easily digestible manner.
+
+The dataset being utilised for the application is about food nutrition in a comma separated value (CSV) format. The values present are different items of food, and the macronutrients and micronutrients of the respective food items.
+
+The user will be able to interact with the application through its GUI. They will be able to enter strings into the nutrition visualiser when searching for specific food items and nutrient values. The software will deliver the searched items nutrition composition in a readable format with models of the data also being presented.
+
+There is a range of target users for the nutrition visualiser software, depending on the users nutritional goals. They can be infrequent users that use the application to look up specific food items occasionally to get a quick breakdown of its nutritional value. Additionally, they could be frequent users that enter all the food items they want to consume into the nutrition visualiser application. The software will allow them to easily keep track of their total nutrition consumption.
+
 ### 1.2 System capabilities/overview
 
 - System Functionality: What will the system do?
 - Features and Functionalities: Describe the key features and functionalities of the system.
 
+The nutrition visualiser application will allow for quick and orderly retrieval of information regarding foods nutritional composition. The food nutrition dataset csv will be used as the database that the user will be able to interact with as part of the software. 
+
+The user will be able to search for specific food items and their corresponding nutritional values by typing into a search bar. It will present the nutritional information in written text as well as through various models of important values, depending on the user's selection. Additionally,the user will be able to filter through foods depending on their nutritional composition. All features and functions will be accessible through the integrated GUI.
+
 ### 1.3	Benefit Analysis
 
 How will this system provide value or benefit?
+
+This system will be practical and provide great benefits to the user, by helping them make more informed decisions related to their eating habits. Correspondingly, this will aid users health and make it easier for them to improve, due to the quantifiable nature of the application. For example a user could be trying to lose weight, and they want to figure out the composition of their diet. They can search the database and get concrete numbers on their current situation. Then by using the search and filtering functions the user will be able to find food items that provide better macro and micronutrients, and take actionable steps to improving their diet.
 
 ## 2. Requirements
 
