@@ -288,6 +288,96 @@ Present a structural design, a hierarchy chart, showing the overall interface’
 - Navigation: How will users navigate through the software?
 - Design Choices: Explain why these design choices were made.
 
+### View 1: Home/Dashboard (Initial View)
+
+Purpose: Clean start screen introducing the tool’s main functionalities (food search, recipe builder, and nutrition analysis).
+
+Components:
+
+- Title/Overview: Brief description of available functionalities.
+
+- Navigation Buttons: Links to navigate to Food Search, Recipe Builder, and other core features.
+- “Get Started” Button: Prompts the user to apply a search or filters to begin, leading to the Food Search view.
+
+### View 2: Food Search with Integrated Filters
+
+Purpose: Search for foods by name and optionally apply nutrient filters to refine results.
+
+Components:
+
+- Search Bar: Input field to search for food items by name, with a scrollable results list.
+
+
+- Results List: Displays matching foods with basic nutritional details.
+Interaction Options:
+
+- “Add to Recipe” Button: Adds selected food to the active recipe. If no recipe is active, prompts the user to create one.
+
+- “View Nutrition Breakdown” Button: Opens a graphical nutritional breakdown in a separate tab (only one breakdown tab can be active at a time).
+
+Filter Integration:
+
+- Nutrient Level Filter: Opens a modal to adjust nutrient levels.
+
+- Nutrient Range Filter: Opens a modal to set ranges for nutrients.
+
+- Clear Filters Button: Resets any active filters and search results.
+
+### View 3: Recipe Builder
+
+Purpose: Build and customize a recipe by adding selected foods and specifying their quantities, then calculate the total nutritional value.
+
+How It Works:
+
+- Recipe Creation: Before adding foods, the user is prompted to name their recipe.
+A new Recipe Builder Tab is opened with an initially blank list and a message like “Add foods to get started.”
+
+- Adding Foods:
+From the Food Search view, the user can select foods to add to the recipe. Each added food appears in the Recipe Builder Tab.
+
+- Quantity Input: For each added food, the user can specify the amount (in grams or units). A slider or input field adjusts the nutritional values based on the quantity.
+
+- Nutritional Summary: The tool calculates the total calories, macronutrients, and other nutrients for the recipe.
+
+- Feedback:
+If no foods have been added, a message guides the user (e.g., “Add foods to get started”).
+
+- Error messages (e.g., “Invalid input”) are shown in a designated error region on the screen.
+
+- Saving Recipes:
+Once the recipe is complete, the user can save it for future reference. Initially, only one recipe can be saved and loaded at a time.
+
+### View 4: Nutrition Breakdown (Tab Navigation)
+
+Purpose: Display the detailed nutritional breakdown of a selected food item graphically.
+
+How It Works:
+
+- View Trigger: When the user selects "View Nutrition Breakdown" from the search results, a new Nutrition Breakdown Tab opens.
+
+- Graph Display: A graphical representation (e.g., pie or bar chart) displays macronutrients and key vitamins/minerals for the selected food.
+
+- Tab Limit: Since only one Nutrition Breakdown Tab can be open at a time, requesting a new breakdown will replace the current graphical display with the newly selected food’s data.
+
+### General Considerations
+Tab Limitations:
+
+- Users can have up to two additional tabs open at any time:
+- One Recipe Builder Tab (to manage an active recipe).
+- One Nutrition Breakdown Tab (for graphical information on the last viewed food item).
+- If the user requests a new graphical breakdown, it will replace the current Nutrition Breakdown Tab, ensuring only one graphical summary is viewable at a time.
+
+Handling Recipe Creation:
+
+- If a user attempts to add an item to a recipe and no recipe tab is open, the system will prompt the user to create a new recipe (similar to manually starting a new recipe).
+- The user will be asked to name their recipe before the Recipe Builder Tab opens, keeping the flow intuitive.
+
+Feedback and Error Display:
+
+- Errors (e.g., "invalid input" or "no foods added") and user actions (e.g., "food added to recipe") will be handled in a clear, consistent region of the UI. Errors should be visually distinct (e.g., red for errors, green for success).
+
+
+
 Example:  
 ![Structural Design](./Structural_Design.png)
 

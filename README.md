@@ -210,3 +210,20 @@ Additional Notes:
 - forgot to add this to the original push.
 
 ---
+
+<br>
+
+---
+
+Name: Peter
+
+Date: 07/09/2024
+
+Entry Info:
+- Added initial idea for UI structure for understanding purposes
+
+Additional Notes:
+
+- will change to hierarchy diagram.
+
+---
