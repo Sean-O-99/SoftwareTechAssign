@@ -77,7 +77,7 @@ The deliverables of this project will include the completed nutritional visualis
 
 ## 2. Work Breakdown Structure
 
-![WBS](./Work%20Breakdown%20Structure/WBS-2.png)
+![WBS](./Work%20Breakdown%20Structure/WBS3.png)
 ## 3. Activity Definition Estimation
 
 Define the activities required for your project based on the WBS, and assign responsibilities to team members. Each activity should be numbered and correspond with your Gantt chart. Provide estimated durations for each activity to facilitate Gantt chart preparation.
@@ -98,7 +98,7 @@ Define the activities required for your project based on the WBS, and assign res
 | 3.2          | Implement Nutrition Breakdown Feature      | <ul><li>Develop the functionality that provides users with detailed nutritional information about the food items</ul>                 | 7 days                | All                      |
 | 3.3          | Implement Nutrition Range Filter Feature   | <ul><li>Develop the feature that allows users to filter food items based on custom nutritional ranges</ul>                            | 7 days                | All                      |
 | 3.4          | Implement Nutrition Level Filter Feature   | <ul><li>Develop the functionality that allows users to search for food items based on predefined nutritional levels</ul>              | 7 days                | All                      |
-| 3.5          | Implement Nutrition Tracker Feature(?) TBD | <ul><li>TBD</ul>                                                                                                                      | 7 days                | All                      |
+| 3.5          | Implement Recipe Builder | <ul><li>Develop the functionality that allows users to select multiple foods and create a simple recipe by summing up their nutritional values.</ul>                                                                                                                      | 7 days                | All                      |
 | 3.6          | Testing                                    |                                                                                                                                       |
 | 3.6.1        | Unit Testing                               | <ul><li>Perform testing on individual components</ul>                                                                                 | 3 days                | associated dev           |
 | 3.6.2        | User Acceptance Testing                    | <ul><li>Conduct testing with users to ensure system meets their needs and requirements <li>Collect and incorporate user feedback</ul> | 4 days                | All                      |
