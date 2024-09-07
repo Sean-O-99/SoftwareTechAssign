@@ -68,7 +68,7 @@ The nutrition visualiser software aims to enhance end users health and eating ha
 
 The dataset being utilised for the application is about food nutrition in a comma separated value (CSV) format. The values present are different items of food, and the macronutrients and micronutrients of the respective food items.
 
-The user will be able to interact with the application through its GUI. They will be able to enter strings into the nutrition visualiser when searching for specific food items and nutrient values. The software will deliver the searched items nutrition composition in a readable format with models of the data also being presented.
+The user will be able to interact with the application through its GUI. They will be able to enter strings into the nutrition visualiser when searching for specific food items and nutrient values. The software will deliver the searched items nutrition composition in a readable format with models of the data being presented to help understanding.
 
 There is a range of target users for the nutrition visualiser software, depending on the users nutritional goals. They can be infrequent users that use the application to look up specific food items occasionally to get a quick breakdown of its nutritional value. Additionally, they could be frequent users that enter all the food items they want to consume into the nutrition visualiser application. The software will allow them to easily keep track of their total nutrition consumption.
 
@@ -222,17 +222,17 @@ Below is a system-level Use Case Diagram illustrating all required features:
 
 
 
-| User Case ID     | 3  |
-|------------------|------|
-| Use Case Name    | Nutrition Range Filter |
-| Actors           | User |
-| Description      | Users can filter food items based on their desired range for any one of the nutrition.  |
-| Flow of Events   | 1. User sets a nutritional range filter (e.g. 10g fat). |
-|                  | 2. System applies the filter to the list of food items. |
-|                  | 3. System displays the filtered list of food items that meet the range set by user. |
-|                  | 4. User reviews the filtered list. |
+| User Case ID     | 3                                                                                                                     |
+|------------------|-----------------------------------------------------------------------------------------------------------------------|
+| Use Case Name    | Nutrition Range Filter                                                                                                |
+| Actors           | User                                                                                                                  |
+| Description      | Users can filter food items based on their desired range for any one of the nutrients.                              |
+| Flow of Events   | 1. User sets a nutritional range filter (e.g. 10g fat).                                                               |
+|                  | 2. System applies the filter to the list of food items.                                                               |
+|                  | 3. System displays the filtered list of food items that meet the range set by user.                                   |
+|                  | 4. User reviews the filtered list.                                                                                    |
 | Alternate Flow   | 1. If no food items meet the filter set by user, the system displays a message indicating that no results were found. |
-|                  | 2. User can adjust the filter and try again. |
+|                  | 2. User can adjust the filter and try again.                                                                          |
 
 | User Case ID     | 4  |
 |------------------|------|
@@ -274,6 +274,36 @@ List all key functions within the software. For each function, provide:
 - Input Parameters: List parameters, their data types, and their use.
 - Return Value: Describe what the function returns.
 - Side Effects: Note any side effects, such as changes to global variables or data passed by reference.
+
+##### Food Search Function
+Description: The purpose of this function is to match a search term, entered by the user, with food item(s) in the database.
+Input Parameters: A string entered by the user, and search item button clicked triggering an event that starts the processing of the users search term against database items.
+Return Value: Matching item(s) in the database will be returned as string(s) inside clickable button(s).
+Side Effects: If a word is spelt incorrectly the application will show an error message through try and except fallbacks.
+
+##### Nutritional Breakdown Function
+Description: This function allows the user to see the macronutrient and micronutrient values of a selected food item with models that help user understanding.
+Input Parameters: Clicking respective button of food item, which triggers the function to search for all nutrient values of that item in the database.
+Return Value: The selected food item's corresponding macronutrient and micronutrient values alongside models are returned.
+Side Effects: Once the food item is selected the global variable nutritionBreakdownItem will be set to the value of the button that was clicked.
+
+##### Nutritional Range Filter Function
+Description: This function allows the user to apply a filter based on a selected nutrient and input minimum and maximum values of that nutrient. The application will then display a list of foods that are in that range.
+Input Parameters: 
+Return Value:
+Side Effects:
+
+##### Nutritional Level Filter Function
+Description: 
+Input Parameters:
+Return Value:
+Side Effects:
+
+##### Recipe Builder Function
+Description:
+Input Parameters:
+Return Value:
+Side Effects:
 
 #### 3.2.2 Data Structures / Data Sources
 List all data structures or sources used in the software. For each, provide:
