@@ -5,11 +5,11 @@
 
 ## Team members
 
-| Student Number | Name          | 
-|----------------|---------------|
-| s5113175       | Peter Symoniw |
-| s222222        | Full name     | 
-| s5291335        | Sipa Sunuwar     | 
+| Student Number | Name            | 
+|----------------|-----------------|
+| s5113175       | Peter Symoniw   |
+| s5094725       | Sean O'Sullivan | 
+| s5291335       | Sipa Sunuwar    | 
 
 
 <div style="page-break-after: always;"></div>
@@ -30,7 +30,11 @@
     * [1.3	Benefit Analysis](#13benefit-analysis)
   * [2. Requirements](#2-requirements)
     * [2.1 User Requirements](#21-user-requirements)
+      * [Core User Requirements](#core-user-requirements)
+      * [Fictional User Profile:](#fictional-user-profile)
     * [2.2	Software Requirements](#22software-requirements)
+      * [Functional Requirements](#functional-requirements)
+      * [Non-Functional Requirements](#non-functional-requirements)
     * [2.3 Use Case Diagram](#23-use-case-diagram)
     * [2.4 Use Cases](#24-use-cases)
   * [3.	Software Design and System Components](#3-software-design-and-system-components-)
@@ -43,6 +47,7 @@
   * [4. User Interface Design](#4-user-interface-design)
     * [4.1 Structural Design](#41-structural-design)
     * [4.2	Visual Design](#42visual-design)
+    * [4.3 General UI Considerations](#43-general-ui-considerations)
 <!-- TOC -->
 
 
@@ -59,14 +64,28 @@
 - Data Input/Output: What kind of data input and output is required?
 - Target Users: Who will use the system, and why?
 
+The nutrition visualiser software aims to enhance end users health and eating habits by allowing them to see and visualise the nutrients of foods they consume. It will give them all the important information they need to know in a easily digestible manner.
+
+The dataset being utilised for the application is about food nutrition in a comma separated value (CSV) format. The values present are different items of food, and the macronutrients and micronutrients of the respective food items.
+
+The user will be able to interact with the application through its GUI. They will be able to enter strings into the nutrition visualiser when searching for specific food items and nutrient values. The software will deliver the searched items nutrition composition in a readable format with models of the data also being presented.
+
+There is a range of target users for the nutrition visualiser software, depending on the users nutritional goals. They can be infrequent users that use the application to look up specific food items occasionally to get a quick breakdown of its nutritional value. Additionally, they could be frequent users that enter all the food items they want to consume into the nutrition visualiser application. The software will allow them to easily keep track of their total nutrition consumption.
+
 ### 1.2 System capabilities/overview
 
 - System Functionality: What will the system do?
 - Features and Functionalities: Describe the key features and functionalities of the system.
 
+The nutrition visualiser application will allow for quick and orderly retrieval of information regarding foods nutritional composition. The food nutrition dataset csv will be used as the database that the user will be able to interact with as part of the software. 
+
+The user will be able to search for specific food items and their corresponding nutritional values by typing into a search bar. It will present the nutritional information in written text as well as through various models of important values, depending on the user's selection. Additionally,the user will be able to filter through foods depending on their nutritional composition. All features and functions will be accessible through the integrated GUI.
+
 ### 1.3	Benefit Analysis
 
 How will this system provide value or benefit?
+
+This system will be practical and provide great benefits to the user, by helping them make more informed decisions related to their eating habits. Correspondingly, this will aid users health and make it easier for them to improve, due to the quantifiable nature of the application. For example a user could be trying to lose weight, and they want to figure out the composition of their diet. They can search the database and get concrete numbers on their current situation. Then by using the search and filtering functions the user will be able to find food items that provide better macro and micronutrients, and take actionable steps to improving their diet.
 
 ## 2. Requirements
 
@@ -272,25 +291,115 @@ This is a test.
 ## 4. User Interface Design
 
 ### 4.1 Structural Design
-Present a structural design, a hierarchy chart, showing the overall interface’s structure. Address:
 
-- Structure: How will the software be structured?
-- Information Grouping: How will information be organized?
-- Navigation: How will users navigate through the software?
-- Design Choices: Explain why these design choices were made.
+Hierarchy Chart:
+![UI Hierarchy.png](..%2FUI%2FUI%20Hierarchy.png)
 
-Example:  
-![Structural Design](./Structural_Design.png)
 
 ### 4.2	Visual Design
-Include all wireframes or mock-ups of the interface. Provide a discussion, explanation, and justification for your design choices. Hand-drawn wireframes are acceptable.
 
-- Interface Components: Clearly label all components.
-- Screens/Menus: Provide wireframes for different screens, menus, and options.
-- Design Details: Focus on the layout and size of components; color and graphics are not required. 
+Welcome View:  
+![NutritionApp-View1.png](..%2FUI%2FNutritionApp-View1.png)
 
-Example:  
-![Visual Design](./visual_design.png)
+Purpose:
+
+Serves as the main entry point to the application and provides the user with context about the tool.
+
+Components:
+
+- __Title__ - The title of the application, large and centered.
+- __Welcome Message__ - A brief message informing the user about the capabilities of the application readable and centered to ensure they know what they can get out of the application.
+- __Get Started__ - Takes the user to the main UI of the application when they're ready clearly visible when they're ready to proceed.
+
+
+Main View:
+![NutritionApp-View2.png](..%2FUI%2FNutritionApp-View2.png)
+
+Purpose:
+
+The Main Search View serves as the starting point for users to query the database for food items, apply desired filters and view their search results. It's the central hub between all the application's functions that allows the user to interact with data.
+
+Components:
+
+- __Search Bar__ - Text input field positioned at the top for immediate access allowing users to identify the most essential operation. It allows users to query the dataset for a certain food.
+- __Search Button__ - Starts the search for the desired item positioned immediately next to the field for intuitive display.
+- __Filter Button__ - Opens a new view overlay that offers advanced filter options that the user can select for their search. Compiled into an overlay as it is unessential once specified so the user does not need to see it at all times. This is positioned next to search to denote its association with the feature.
+- __Search Results Area__ - Displays a list of the fetched search results from the dataset and grows downwards sorted into columns for each attribute. The area is large and can be scrolled to maximise space as it is the element the user will be parsing.
+- __Interactive Buttons__ - The plus symbol and magnifying glass depict buttons that will allow the user to add the item to a pending recipe or inspect the food item for a more graphical display. They're positioned such that the user knows which item they are associated with and the symbols are intuitive the depict th action to be taken.
+- __Tab Navigation Area__ - The different views of the app can be navigated to by clicking the tabs at the top. Again they are placed in an intuitive and visible location whilst not impeding any display. 
+
+
+Apply Filter View:
+![NutritionApp-View3.png](..%2FUI%2FNutritionApp-View3.png)
+
+Purpose:
+
+This view allows users to apply selected filters to their search queries. It is presented to the user as a modal or overlay to conserve space on the main screen whilst still providing comprehensive functionality. 
+
+
+Components:
+
+- __Optional Filter Range Values__ - Allows the user to search for nutrient values within the specified range for the associated nutrient. It will list the nutrient components of foods and can be scrolled if necessary.
+- __Optional Nutrient Level Values__ - Radial buttons that allows a user to specify the various levels of a particular nutrient they want to have in their results. Only one button will be selected at a time and double tapping the same button should de-select it.
+- __Close Button__ - Intuitive symbol and positioning. Closes the filters without saving.
+- __Clear Filters__ - Clears the search filters if any are set. Positioned in a clear location but separated from the apply filters button to reduce the likelihood of accidentally clearing.
+- __Apply Filters__ - Applies the search filters to be used and closes the overlay window.
+
+
+Graphical Display View:
+![NutritionApp-View4.png](..%2FUI%2FNutritionApp-View4.png)
+
+Purpose:
+
+This view presents the user with the graphical analysis made by the application.
+
+
+Components:
+
+- __Food Name__ - Displays the currently inspected food item. Positioned within the main viewing area as a clear indicator of what information is being displayed.
+- __Pie Chart Region__ - Displays the calculated pie chart visual representation for the associated food. Takes up half the view space as it is an important element.
+- __Bar Chart Region__ - Displays the calculated bar graph for the associated food. Takes up half the space as it is an important element.
+
+Additional considerations:
+
+Depending how the visualisations are rendered an option may be to switch to full view width displays and placing the graphs on top of each other with a scrollable view space.
+
+Recipe Builder View:
+![NutritionApp-View5.png](..%2FUI%2FNutritionApp-View5.png)
+
+Purpose:
+
+This view allows the user to compile a list of various food items into a 'recipe' and sum its total nutritional value.
+
+Components:
+
+- __Name Popup__ - When initialised the recipe must be named so the popup ensures that the user names their recipe. It is displayed as a prominent screen element and requires confirmation to proceed to operating the view. Once named it closes and moves out of the way populating a region of the screen to denote clear association with the recipe being constructed.
+- __Total Accumulated Nutrients__ - A region that displays the total accumulated nutritional value of the recipe. Positioned at the top so the user always has a clear indication of their recipe.
+- __Save__ - Allows the user to save their recipe. Positioned at the top with other important information but far to the right as it is not always applicable to the user.
+- __Remove Button__ - Removes an item from the recipe. Uses an X symbol for intuitive understanding. Positioned next to the item it should remove.
+- __Quantity__ - Allows the user to specify the amount of the associated food to calculate the nutrients for as the dataset lists quantities per 100g so amounts need to be adjusted for more realistic recipes.
+- __Imported Food Item__ - Displays the nutrient information for the associated food as a general reference to the user. Presented in a recognisable format from the previous search view. 
+
+### 4.3 General UI Considerations
+Tab Limitations:
+
+- Users can have up to two additional tabs open at any time:
+- One Recipe Builder Tab (to manage an active recipe).
+- One Nutrition Breakdown Tab (for graphical information on the last viewed food item).
+- If the user requests a new graphical breakdown, it will replace the current Nutrition Breakdown Tab, ensuring only one graphical summary is viewable at a time.
+
+Handling Recipe Creation:
+
+- If a user attempts to add an item to a recipe and no recipe tab is open, the system will prompt the user to create a new recipe (similar to manually starting a new recipe).
+- The user will be asked to name their recipe before the Recipe Builder Tab opens, keeping the flow intuitive.
+
+Feedback and Error Display:
+
+- Errors (e.g., "invalid input" or "no foods added") and user actions (e.g., "food added to recipe") will be handled in a clear, consistent region of the UI. Errors should be visually distinct (e.g., red for errors, green for success).
+
+
+
+
 
 
 
