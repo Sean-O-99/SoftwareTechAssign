@@ -98,7 +98,10 @@ Users of the system are likely to be individuals who are health-conscious and in
   * Mid: Between 33% and 66% of the highest value.
   * High: Greater than 66% of the highest value.
 
-5.	Additional feature: Nutritional tracker(?)
+5. Recipe Builder
+* Users should be able to select multiple food items and create a simple recipe.
+* System should automatically add up their nutritional values and display them for users.
+* Users should be able to save their created recipes for future reference.
 
 #### Fictional User Profile:
 **Name:** Alex Li\
@@ -142,8 +145,10 @@ This section provides a detailed overview of the capabilities and features of th
   - R4.1 The system shall allow users to select a nutrient (e.g. protein) and choose a level (low, mid, high).
   - R4.2 The system shall filter the database based on predefined thresholds for each nutritional level.
   - R4.3 The system shall display a list of foods categorized into the selected nutrient levels (low, mid, high).
-5.	Additional Feature: (TBD)
-  - 
+5. Recipe Builder
+  - R5.1 The system shall allow users to select multiple food items.
+  - R5.2 The system shall calculate the total nutritional values (e.g., calories, proteins, fats, etc.) for the selected food items.
+  - R5.3 The system shall display the combined nutritional values of the selected food items in a clear format.
 
 #### Non-Functional Requirements
 1.	Performance
@@ -162,10 +167,9 @@ This section provides a detailed overview of the capabilities and features of th
 
 
 ### 2.3 Use Case Diagram
-Provide a system-level Use Case Diagram illustrating all required features.
+Below is a system-level Use Case Diagram illustrating all required features:
 
-Example:  
-![Use Case Diagram](./UCD.png)
+![Use Case Diagram](Use%20Case/UCD.png)
 
 ### 2.4 Use Cases
 
@@ -180,8 +184,6 @@ Example:
 |                | 4. User selects a food item from the results to view the nutritional information about it. |
 | Alternate Flow | 1. If no matching items are found, system displays message to inform users that no results were found.
 |                | 2. User can modify their search term and try again. |
-
-
 
 
 
@@ -226,11 +228,14 @@ Example:
 
 | User Case ID   | 5  |
 |----------------|------|
-| Use Case Name  | TBD |
-| Actors         |  |
-| Description    |  |
-| Flow of Events |  |
-| Alternate Flow |  |
+| Use Case Name  | Recipe builder |
+| Actors         | User |
+| Description    | User can select multiple foods and create a simple recipe by summing up their nutritional values. |
+| Flow of Events | 1. User searches for food items. |
+|                | 2. User adds selected food items to the recipe. |
+|                | 3. System calculates and displays the total nutritional values of selected items. |
+|                | 4. User names the recipe and saves it for future reference. |
+| Alternate Flow | 1. If system cannot retrieve nutritional information for a selected item, it notifies the user and excludes that item from the total calculation. |
 
 
 ## 3.	Software Design and System Components 
