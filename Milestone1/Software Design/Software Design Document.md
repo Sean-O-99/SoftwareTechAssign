@@ -376,20 +376,37 @@ Feedback and Error Display:
 
 - Errors (e.g., "invalid input" or "no foods added") and user actions (e.g., "food added to recipe") will be handled in a clear, consistent region of the UI. Errors should be visually distinct (e.g., red for errors, green for success).
 
-
-
 Example:  
 ![Structural Design](./Structural_Design.png)
 
 ### 4.2	Visual Design
-Include all wireframes or mock-ups of the interface. Provide a discussion, explanation, and justification for your design choices. Hand-drawn wireframes are acceptable.
 
-- Interface Components: Clearly label all components.
-- Screens/Menus: Provide wireframes for different screens, menus, and options.
+Welcome View:  
+![NutritionApp-View1.png](..%2FUI%2FNutritionApp-View1.png)
+
 - Design Details: Focus on the layout and size of components; color and graphics are not required. 
 
-Example:  
-![Visual Design](./visual_design.png)
+Main View:
+![NutritionApp-View2.png](..%2FUI%2FNutritionApp-View2.png)
+
+- Design Details: Focus on the layout and size of components; color and graphics are not required. 
+
+Apply Filter View:
+![NutritionApp-View3.png](..%2FUI%2FNutritionApp-View3.png)
+
+- Design Details: Focus on the layout and size of components; color and graphics are not required. 
+
+Graphical Display View:
+![NutritionApp-View4.png](..%2FUI%2FNutritionApp-View4.png)
+
+- Design Details: Focus on the layout and size of components; color and graphics are not required. 
+
+Recipe Builder View:
+![NutritionApp-View5.png](..%2FUI%2FNutritionApp-View5.png)
+
+- Design Details: Focus on the layout and size of components; color and graphics are not required. 
+
+
 
 
 
