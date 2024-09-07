@@ -277,33 +277,33 @@ List all key functions within the software. For each function, provide:
 
 ##### Food Search Function
 Description: The purpose of this function is to match a search term, entered by the user, with food item(s) in the database.
-Input Parameters: A string entered by the user, and search item button clicked triggering an event that starts the processing of the users search term against database items.
+Input Parameters: A string entered by the user, and the 'search item' button being clicked will trigger the processing of the users search term against database items.
 Return Value: Matching item(s) in the database will be returned as string(s) inside clickable button(s).
-Side Effects: If a word is spelt incorrectly the application will show an error message through try and except fallbacks.
+Side Effects: Once the button is clicked the string passes to a global variable that is used to compare to the database.
 
 ##### Nutritional Breakdown Function
 Description: This function allows the user to see the macronutrient and micronutrient values of a selected food item with models that help user understanding.
-Input Parameters: Clicking respective button of food item, which triggers the function to search for all nutrient values of that item in the database.
+Input Parameters: Clicking the respective button of a food item, triggers the function to search and retrieve all nutrient values of that item in the database.
 Return Value: The selected food item's corresponding macronutrient and micronutrient values alongside models are returned.
 Side Effects: Once the food item is selected the global variable nutritionBreakdownItem will be set to the value of the button that was clicked.
 
 ##### Nutritional Range Filter Function
 Description: This function allows the user to apply a filter based on a selected nutrient and input minimum and maximum values of that nutrient. The application will then display a list of foods that are in that range.
-Input Parameters: 
-Return Value:
-Side Effects:
+Input Parameters: Nutrient type will be input as a string in a textbox, the minimum and maximum vales will be input as integers in their respective textboxes. A button titled 'filter' will be the clicked to initiate the function. 
+Return Value: The function returns a list of food items that fall within the minimum and maximum range of the specified nutrient.
+Side Effects: A global variable with an array datatype will be used to group food items within the specified nutrient range.
 
 ##### Nutritional Level Filter Function
-Description: 
-Input Parameters:
-Return Value:
-Side Effects:
+Description: The purpose of this function is to allow the user to filter foods by their nutritional content. There are three varying levels low, mid, and high.
+Input Parameters: The user clicks one of three nutritional level filter buttons, title low, mid, or high.
+Return Value: The function returns a list of food items that are within the filtered level.
+Side Effects: A global variable with an array datatype will be used to group food items within the targeted nutritional level.
 
 ##### Recipe Builder Function
-Description:
-Input Parameters:
-Return Value:
-Side Effects:
+Description: This function allows the user to select multiple food items and add them to recipe. This will add up the nutrients from the various components and give the total nutritional content of the recipe.
+Input Parameters: The user clicks on the 'new recipe' button, this initiates the function. Then the user will be able to add searched items to the recipe which will use the array datatype.
+Return Value: The function returns a recipe that contains total nutritional composition of the combined foods.
+Side Effects: A global variable will be used to store the recipes, to allow later access.
 
 #### 3.2.2 Data Structures / Data Sources
 List all data structures or sources used in the software. For each, provide:
