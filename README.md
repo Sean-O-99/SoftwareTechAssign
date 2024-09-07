@@ -227,3 +227,21 @@ Additional Notes:
 - will change to hierarchy diagram.
 
 ---
+<br>
+
+---
+
+Name: Sipa
+
+Date: 07/09/2024
+
+Entry Info:
+- Updated project plan section 2. and 3. with the finalised additional feature: Recipe builder
+- Updated SDD with finalised additional feature: Recipe builder
+- Added Use Case Diagram to SDD
+
+Additional Notes:
+
+- 
+
+---
