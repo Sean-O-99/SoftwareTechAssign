@@ -384,27 +384,86 @@ Example:
 Welcome View:  
 ![NutritionApp-View1.png](..%2FUI%2FNutritionApp-View1.png)
 
-- Design Details: Focus on the layout and size of components; color and graphics are not required. 
+Purpose:
+
+Serves as the main entry point to the application and provides the user with context about the tool.
+
+Components:
+
+- __Title__ - The title of the application, large and centered.
+- __Welcome Message__ - A brief message informing the user about the capabilities of the application readable and centered to ensure they know what they can get out of the application.
+- __Get Started__ - Takes the user to the main UI of the application when they're ready clearly visible when they're ready to proceed.
+
 
 Main View:
 ![NutritionApp-View2.png](..%2FUI%2FNutritionApp-View2.png)
 
-- Design Details: Focus on the layout and size of components; color and graphics are not required. 
+Purpose:
+
+The Main Search View serves as the starting point for users to query the database for food items, apply desired filters and view their search results. It's the central hub between all the application's functions that allows the user to interact with data.
+
+Components:
+
+- __Search Bar__ - Text input field positioned at the top for immediate access allowing users to identify the most essential operation. It allows users to query the dataset for a certain food.
+- __Search Button__ - Starts the search for the desired item positioned immediately next to the field for intuitive display.
+- __Filter Button__ - Opens a new view overlay that offers advanced filter options that the user can select for their search. Compiled into an overlay as it is unessential once specified so the user does not need to see it at all times. This is positioned next to search to denote its association with the feature.
+- __Search Results Area__ - Displays a list of the fetched search results from the dataset and grows downwards sorted into columns for each attribute. The area is large and can be scrolled to maximise space as it is the element the user will be parsing.
+- __Interactive Buttons__ - The plus symbol and magnifying glass depict buttons that will allow the user to add the item to a pending recipe or inspect the food item for a more graphical display. They're positioned such that the user knows which item they are associated with and the symbols are intuitive the depict th action to be taken.
+- __Tab Navigation Area__ - The different views of the app can be navigated to by clicking the tabs at the top. Again they are placed in an intuitive and visible location whilst not impeding any display. 
+
 
 Apply Filter View:
 ![NutritionApp-View3.png](..%2FUI%2FNutritionApp-View3.png)
 
-- Design Details: Focus on the layout and size of components; color and graphics are not required. 
+Purpose:
+
+This view allows users to apply selected filters to their search queries. It is presented to the user as a modal or overlay to conserve space on the main screen whilst still providing comprehensive functionality. 
+
+
+Components:
+
+- __Optional Filter Range Values__ - Allows the user to search for nutrient values within the specified range for the associated nutrient. It will list the nutrient components of foods and can be scrolled if necessary.
+- __Optional Nutrient Level Values__ - Radial buttons that allows a user to specify the various levels of a particular nutrient they want to have in their results. Only one button will be selected at a time and double tapping the same button should de-select it.
+- __Close Button__ - Intuitive symbol and positioning. Closes the filters without saving.
+- __Clear Filters__ - Clears the search filters if any are set. Positioned in a clear location but separated from the apply filters button to reduce the likelihood of accidentally clearing.
+- __Apply Filters__ - Applies the search filters to be used and closes the overlay window.
+
 
 Graphical Display View:
 ![NutritionApp-View4.png](..%2FUI%2FNutritionApp-View4.png)
 
-- Design Details: Focus on the layout and size of components; color and graphics are not required. 
+Purpose:
+
+This view presents the user with the graphical analysis made by the application.
+
+
+Components:
+
+- __Food Name__ - Displays the currently inspected food item. Positioned within the main viewing area as a clear indicator of what information is being displayed.
+- __Pie Chart Region__ - Displays the calculated pie chart visual representation for the associated food. Takes up half the view space as it is an important element.
+- __Bar Chart Region__ - Displays the calculated bar graph for the associated food. Takes up half the space as it is an important element.
+
+Additional considerations:
+
+Depending how the visualisations are rendered an option may be to switch to full view width displays and placing the graphs on top of each other with a scrollable view space.
 
 Recipe Builder View:
 ![NutritionApp-View5.png](..%2FUI%2FNutritionApp-View5.png)
 
-- Design Details: Focus on the layout and size of components; color and graphics are not required. 
+Purpose:
+
+This view allows the user to compile a list of various food items into a 'recipe' and sum its total nutritional value.
+
+Components:
+
+- __Name Popup__ - When initialised the recipe must be named so the popup ensures that the user names their recipe. It is displayed as a prominent screen element and requires confirmation to proceed to operating the view. Once named it closes and moves out of the way populating a region of the screen to denote clear association with the recipe being constructed.
+- __Total Accumulated Nutrients__ - A region that displays the total accumulated nutritional value of the recipe. Positioned at the top so the user always has a clear indication of their recipe.
+- __Save__ - Allows the user to save their recipe. Positioned at the top with other important information but far to the right as it is not always applicable to the user.
+- __Remove Button__ - Removes an item from the recipe. Uses an X symbol for intuitive understanding. Positioned next to the item it should remove.
+- __Quantity__ - Allows the user to specify the amount of the associated food to calculate the nutrients for as the dataset lists quantities per 100g so amounts need to be adjusted for more realistic recipes.
+- __Imported Food Item__ - Displays the nutrient information for the associated food as a general reference to the user. Presented in a recognisable format from the previous search view. 
+
+
 
 
 
