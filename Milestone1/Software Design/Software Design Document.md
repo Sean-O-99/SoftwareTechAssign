@@ -261,9 +261,8 @@ Below is a system-level Use Case Diagram illustrating all required features:
 ## 3.	Software Design and System Components 
 
 ### 3.1	Software Design
-Include a flowchart that illustrates how your software will operate.
+Flowchart that illustrates how the software will operate.
 
-Example:  
 ![Software Design](./software_design_flowchart.png)
 
 ### 3.2	System Components
@@ -275,35 +274,35 @@ List all key functions within the software. For each function, provide:
 - Return Value: Describe what the function returns.
 - Side Effects: Note any side effects, such as changes to global variables or data passed by reference.
 
-##### Food Search Function
-Description: The purpose of this function is to match a search term, entered by the user, with food item(s) in the database.
-Input Parameters: A string entered by the user, and the 'search item' button being clicked will trigger the processing of the users search term against database items.
-Return Value: Matching item(s) in the database will be returned as string(s) inside clickable button(s).
-Side Effects: Once the button is clicked the string passes to a global variable that is used to compare to the database.
+__Food Search Function__
+- Description: The purpose of this function is to match a search term, entered by the user, with food item(s) in the database.
+- Input Parameters: A string entered by the user, and the 'search item' button being clicked will trigger the processing of the users search term against database items.
+- Return Value: Matching item(s) in the database will be returned as a list in a panel.
+- Side Effects: There is a global variable used for the search result items.
 
-##### Nutritional Breakdown Function
-Description: This function allows the user to see the macronutrient and micronutrient values of a selected food item with models that help user understanding.
-Input Parameters: Clicking the respective button of a food item, triggers the function to search and retrieve all nutrient values of that item in the database.
-Return Value: The selected food item's corresponding macronutrient and micronutrient values alongside models are returned.
-Side Effects: Once the food item is selected the global variable nutritionBreakdownItem will be set to the value of the button that was clicked.
+__Nutritional Breakdown Function__
+- Description: This function allows the user to see the macronutrient and micronutrient values of a selected food item with models that help user understanding.
+- Input Parameters: Clicking the respective button of a food item triggers the function to search and retrieve all nutrient values of that item in the database.
+- Return Value: The selected food item's corresponding macronutrient and micronutrient values alongside models are returned.
+- Side Effects: Once the food item is selected a global variable will be set to the name of that item.
 
-##### Nutritional Range Filter Function
-Description: This function allows the user to apply a filter based on a selected nutrient and input minimum and maximum values of that nutrient. The application will then display a list of foods that are in that range.
-Input Parameters: Nutrient type will be input as a string in a textbox, the minimum and maximum vales will be input as integers in their respective textboxes. A button titled 'filter' will be the clicked to initiate the function. 
-Return Value: The function returns a list of food items that fall within the minimum and maximum range of the specified nutrient.
-Side Effects: A global variable with an array datatype will be used to group food items within the specified nutrient range.
+__Nutritional Range Filter Function__
+- Description: This function allows the user to apply a filter based on a selected nutrient and input minimum and maximum values of that nutrient. The application will then display a list of foods that are in that range.
+- Input Parameters: Nutrient type will be input as a string in a textbox, the minimum and maximum vales will be input as integers in their respective textboxes. A button titled 'filter' will be the clicked to initiate the function. 
+- Return Value: The function returns a list of food items that fall within the minimum and maximum range of the specified nutrient.
+- Side Effects: A global variable with an array datatype will be used to group food items within the specified nutrient range.
 
-##### Nutritional Level Filter Function
-Description: The purpose of this function is to allow the user to filter foods by their nutritional content. There are three varying levels low, mid, and high.
-Input Parameters: The user clicks one of three nutritional level filter buttons, title low, mid, or high.
-Return Value: The function returns a list of food items that are within the filtered level.
-Side Effects: A global variable with an array datatype will be used to group food items within the targeted nutritional level.
+__Nutritional Level Filter Function__
+- Description: The purpose of this function is to allow the user to filter foods by their nutritional content. There are three varying levels low, mid, and high.
+- Input Parameters: The user clicks one of three nutritional level filter buttons, title low, mid, or high.
+- Return Value: The function returns a list of food items that are within the filtered level.
+- Side Effects: A global variable with the highest nutritional value will be allocated to that particular food item.
 
-##### Recipe Builder Function
-Description: This function allows the user to select multiple food items and add them to recipe. This will add up the nutrients from the various components and give the total nutritional content of the recipe.
-Input Parameters: The user clicks on the 'new recipe' button, this initiates the function. Then the user will be able to add searched items to the recipe which will use the array datatype.
-Return Value: The function returns a recipe that contains total nutritional composition of the combined foods.
-Side Effects: A global variable will be used to store the recipes, to allow later access.
+__Recipe Builder Function__
+- Description: This function allows the user to select multiple food items and add them to recipe. This will add up the nutrients from the various components and give the total nutritional content of the recipe.
+- Input Parameters: The user clicks on the 'new recipe' button, this initiates the function. Then the user will be able to add searched items to the recipe which will use the array datatype.
+- Return Value: The function returns a recipe that contains total nutritional composition of the combined foods.
+- Side Effects: A global variable with a dictionary datatype will be used to store the recipes, to allow later access.
 
 #### 3.2.2 Data Structures / Data Sources
 List all data structures or sources used in the software. For each, provide:
@@ -312,12 +311,26 @@ List all data structures or sources used in the software. For each, provide:
 - Usage: Describe where and how it is used.
 - Functions: List functions that utilize this structure.
 
+- Type: Lists
+- Usage: Used for storing and displaying search results, and nutritional breakdown values of specific food items. This will allow search results and models of nutritional values to be displayed and formatted.
+- Functions: Food search function, nutritional breakdown function.
+
+- Type: Arrays
+- Usage: Used for storing larger amounts of data, to allow for quicker loading times and operation of the application. Specifically, when storing values for filter functions where there will possibly large amounts of data that needs to be retrieved. The array data structure will also be used for the recipe builder function to allow quick access to the various recipes and their respective nutritional values.
+- Functions: Nutritional range filter function, nutritional level filter function, recipe builder function.
+
+- Type: Modules
+- Usage: Modules will be used to interface various components of the application. The various functions central to the software wouldn't be able to work without cross functionality from modules.
+- Functions: Food search function, nutritional breakdown function, nutritional range filter function, nutritional level filter function, recipe builder function.
+
+- Type: Packages
+- Usage: Packages will be used for integrating the GUI, models and functionality for the application. The ones being utilised are wx and matplotlib.
+- Functions: Food search function, nutritional breakdown function, nutritional range filter function, nutritional level filter function, recipe builder function.
+
 #### 3.2.3 Detailed Design
 Provide pseudocode or flowcharts for all functions listed in Section 3.2.1 that operate on data structures. For instance, include pseudocode or a flowchart for a custom searching function.
 
-#### 3.2.4 Test Entry
-This is a test.
-
+![Software Design](./detailed_design.png)
 
 ## 4. User Interface Design
 
