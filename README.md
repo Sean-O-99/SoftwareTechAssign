@@ -260,3 +260,19 @@ Entry Info:
 ---
 
 <br>
+---
+
+Name: Sipa
+
+Date: 08/09/2024
+
+Entry Info:
+- Updated gantt chart
+
+Additional Notes:
+
+- 
+
+---
+
+<br>
