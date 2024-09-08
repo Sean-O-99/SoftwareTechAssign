@@ -245,3 +245,18 @@ Additional Notes:
 - 
 
 ---
+
+<br>
+
+---
+
+Name: Sean
+
+Date: 08/09/2024
+
+Entry Info:
+- Completed section 3 of the software design document.
+
+---
+
+<br>
