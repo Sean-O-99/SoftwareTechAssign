@@ -276,3 +276,19 @@ Additional Notes:
 ---
 
 <br>
+---
+
+Name: Sean
+
+Date: 01/10/2024
+
+Entry Info:
+- Added template_frame.py, Search_Template.fbp, run_app.py with working search function
+
+Additional Notes:
+
+- 
+
+---
+
+<br>
