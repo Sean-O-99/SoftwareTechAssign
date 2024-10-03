@@ -17,10 +17,10 @@ _ = gettext.gettext
 ## Class MyDialog1
 ###########################################################################
 
-class MyDialog1( wx.Dialog ):
+class MyDialog1 ( wx.Dialog ):
 
     def __init__( self, parent ):
-        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 537,250 ), style = wx.DEFAULT_DIALOG_STYLE )
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = wx.EmptyString, pos = wx.DefaultPosition, size = wx.Size( 537,340 ), style = wx.DEFAULT_DIALOG_STYLE )
 
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
@@ -48,7 +48,12 @@ class MyDialog1( wx.Dialog ):
 
         wSizer2.Add( self.m_staticText4, 0, wx.ALL, 5 )
 
-        self.m_textCtrl2 = wx.TextCtrl( self, wx.ID_ANY, _(u"Minimum"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText12 = wx.StaticText( self, wx.ID_ANY, _(u"Min:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText12.Wrap( -1 )
+
+        wSizer2.Add( self.m_staticText12, 0, wx.ALL, 5 )
+
+        self.m_textCtrl2 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
         wSizer2.Add( self.m_textCtrl2, 0, wx.ALL, 5 )
 
         self.m_staticText5 = wx.StaticText( self, wx.ID_ANY, _(u"to"), wx.DefaultPosition, wx.DefaultSize, 0 )
@@ -56,7 +61,12 @@ class MyDialog1( wx.Dialog ):
 
         wSizer2.Add( self.m_staticText5, 0, wx.ALL, 5 )
 
-        self.m_textCtrl3 = wx.TextCtrl( self, wx.ID_ANY, _(u"Maximum"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText13 = wx.StaticText( self, wx.ID_ANY, _(u"Max:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText13.Wrap( -1 )
+
+        wSizer2.Add( self.m_staticText13, 0, wx.ALL, 5 )
+
+        self.m_textCtrl3 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
         wSizer2.Add( self.m_textCtrl3, 0, wx.ALL, 5 )
 
 
@@ -127,3 +137,5 @@ class MyDialog1( wx.Dialog ):
 
     def apply_filters( self, event ):
         event.Skip()
+
+
