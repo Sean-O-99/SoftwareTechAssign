@@ -17,14 +17,19 @@ def test_apply_filters_valid():
 
 
 def test_apply_filters_invalid():
+    # Test invalid min_value
     filters = apply_filters("Caloric Value", "invalid", "100", "Low")
+    assert filters['selected_nutrient'] == "Caloric Value"
     assert filters['min_value'] is None
     assert filters['max_value'] == 100.0
+    assert filters['level'] == "Low"
 
-    # Test invalid max_value (should handle gracefully)
+    # Test invalid max_value
     filters = apply_filters("Caloric Value", "50", "invalid", "Medium")
+    assert filters['selected_nutrient'] == "Caloric Value"
     assert filters['min_value'] == 50.0
     assert filters['max_value'] is None
+    assert filters['level'] == "Medium"
 
     # Test invalid nutrient (empty string)
     filters = apply_filters("", "50", "100", "High")
