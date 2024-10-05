@@ -99,24 +99,28 @@ class FoodDataTable(MyFrame2):
             zinc[0]: zinc[1],
         }
 
+        macro_colors = ["red", "cyan", "yellow"]
         macro_categories = list(macronutrients.keys())
         macro_sizes = list(macronutrients.values())
 
+        micro_colors = ["green", "orange", "purple", "brown", "pink", "gray", "olive", "cyan", "magenta", "teal",]
         micro_categories = list(micronutrients.keys())
         micro_sizes = list(micronutrients.values())
 
         fig, axes = plt.subplots(1, 2, figsize=(8, 4))
         ax1, ax2 = axes
-        ax1.pie(macro_sizes, labels=macro_categories, shadow=True, autopct="%1.1f%%")
+        ax1.pie(macro_sizes, labels=macro_categories, shadow=True, autopct="%1.1f%%", colors=macro_colors)
         ax1.set_title("Macronutrients")
 
         plt.xticks(rotation=45, ha="right")
-        ax2.bar(micro_categories, micro_sizes)
+        ax2.bar(micro_categories, micro_sizes, color=micro_colors)
         ax2.set_title("Micronutrients")
+        ax2.set_ylabel("Milligrams (mg)")
+        ax2.set_xlabel("Type")
 
         plt.tight_layout()
 
-        dialog = NutritionalDialog(None, food_item, fig)
+        dialog = NutritionalDialog(None, food_item, fig,fat, carbs, protein)
         dialog.ShowModal()
 
         # return food_item, macronutrients
