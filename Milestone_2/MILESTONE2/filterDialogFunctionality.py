@@ -25,8 +25,8 @@ class FilterDialog(MyDialog1):
         self.m_choice1.SetSelection(0)
 
         # Clear text controls
-        self.m_textCtrl2.SetValue("Minimum")  # Clear minimum value
-        self.m_textCtrl3.SetValue("Maximum")  # Clear maximum value
+        self.m_textCtrl2.SetValue("")  # Clear minimum value
+        self.m_textCtrl3.SetValue("")  # Clear maximum value
 
         # Unselect all radio buttons
         self.m_radioBtn1.SetValue(False)

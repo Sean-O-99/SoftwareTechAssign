@@ -34,7 +34,7 @@ class MyFrame2 ( wx.Frame ):
 
         bSizer2.Add( self.m_staticText2, 0, wx.ALL, 5 )
 
-        self.m_textCtrl1 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_textCtrl1 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 200,-1 ), 0 )
         bSizer2.Add( self.m_textCtrl1, 0, wx.ALL, 5 )
 
         self.m_button2 = wx.Button( self, wx.ID_ANY, _(u"Select Filter"), wx.DefaultPosition, wx.DefaultSize, 0 )
