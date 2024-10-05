@@ -1,5 +1,6 @@
 import wx
 from filterDialog import MyDialog1
+from all_functions import clear_filters, apply_filters
 
 class FilterDialog(MyDialog1):
     def __init__(self, parent):
@@ -21,32 +22,20 @@ class FilterDialog(MyDialog1):
         self.m_button4.Bind(wx.EVT_BUTTON, self.clear_filters)
 
     def clear_filters(self, event):
-        # Reset choice control
+        filters = clear_filters()
+
         self.m_choice1.SetSelection(0)
-
-        # Clear text controls
-        self.m_textCtrl2.SetValue("")  # Clear minimum value
-        self.m_textCtrl3.SetValue("")  # Clear maximum value
-
-        # Unselect all radio buttons
+        self.m_textCtrl2.SetValue(filters['min_value'])
+        self.m_textCtrl3.SetValue(filters['max_value'])
         self.m_radioBtn1.SetValue(False)
         self.m_radioBtn2.SetValue(False)
         self.m_radioBtn3.SetValue(False)
 
     def apply_filters(self, event):
-        # Get the selected nutrient from the choice control
+        # Gather inputs from the UI
         selected_nutrient = self.m_choice1.GetString(self.m_choice1.GetSelection())
-
-        # Get the minimum and maximum values from the text controls
-        try:
-            min_value = float(self.m_textCtrl2.GetValue())
-        except ValueError:
-            min_value = None
-
-        try:
-            max_value = float(self.m_textCtrl3.GetValue())
-        except ValueError:
-            max_value = None
+        min_value = self.m_textCtrl2.GetValue()
+        max_value = self.m_textCtrl3.GetValue()
 
         if self.m_radioBtn1.GetValue():
             level = "Low"
@@ -57,11 +46,16 @@ class FilterDialog(MyDialog1):
         else:
             level = None
 
-        self.filter_text = f"Nutrient: {selected_nutrient}, Min: {min_value}, Max: {max_value}, Level: {level}"
-        self.selected_nutrient = selected_nutrient
-        self.min_value = min_value
-        self.max_value = max_value
-        self.level = level
+        # Call the apply_filters function from all_functions.py
+        filters = apply_filters(selected_nutrient, min_value, max_value, level)
+
+        # Now set any other needed UI components based on the result
+        self.filter_text = f"Nutrient: {filters['selected_nutrient']}, Min: {filters['min_value']}, Max: {filters['max_value']}, Level: {filters['level']}"
+        self.selected_nutrient = filters['selected_nutrient']
+        self.min_value = filters['min_value']
+        self.max_value = filters['max_value']
+        self.level = filters['level']
+
         self.EndModal(wx.ID_OK)
 
 if __name__ == "__main__":
