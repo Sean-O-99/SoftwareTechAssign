@@ -48,10 +48,10 @@ class MyDialog1 ( wx.Dialog ):
 
         wSizer2.Add( self.m_staticText4, 0, wx.ALL, 5 )
 
-        self.m_staticText8 = wx.StaticText( self, wx.ID_ANY, _(u"Min:"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.m_staticText8.Wrap( -1 )
+        self.m_staticText14 = wx.StaticText( self, wx.ID_ANY, _(u"Min:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText14.Wrap( -1 )
 
-        wSizer2.Add( self.m_staticText8, 0, wx.ALL, 5 )
+        wSizer2.Add( self.m_staticText14, 0, wx.ALL, 5 )
 
         self.m_textCtrl2 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 50,-1 ), 0 )
         wSizer2.Add( self.m_textCtrl2, 0, wx.ALL, 5 )
@@ -61,10 +61,10 @@ class MyDialog1 ( wx.Dialog ):
 
         wSizer2.Add( self.m_staticText5, 0, wx.ALL, 5 )
 
-        self.m_staticText9 = wx.StaticText( self, wx.ID_ANY, _(u"Max:"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.m_staticText9.Wrap( -1 )
+        self.m_staticText15 = wx.StaticText( self, wx.ID_ANY, _(u"Max:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText15.Wrap( -1 )
 
-        wSizer2.Add( self.m_staticText9, 0, wx.ALL, 5 )
+        wSizer2.Add( self.m_staticText15, 0, wx.ALL, 5 )
 
         self.m_textCtrl3 = wx.TextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.Size( 50,-1 ), 0 )
         wSizer2.Add( self.m_textCtrl3, 0, wx.ALL, 5 )
@@ -137,4 +137,5 @@ class MyDialog1 ( wx.Dialog ):
 
     def apply_filters( self, event ):
         event.Skip()
+
 

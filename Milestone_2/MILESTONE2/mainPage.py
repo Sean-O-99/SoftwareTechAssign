@@ -106,5 +106,3 @@ class MyFrame2 ( wx.Frame ):
         event.Skip()
 
 
-
-
