@@ -63,16 +63,16 @@ This feature allows users to filter food items based on specific nutritional cri
 
 ### Screenshots
 1. As seen in the screenshot below, access the 'Select Filter' button through the main page. 
-![Steps](./Screenshots/3.1.png)
+![Steps](./Executive_Summary_Images/3.1.png)
 2. Upon clicking 'Select Filter', a pop-up window will appear with a list of nutrients and different filter options.
-![Steps](./Screenshots/3.2.png)
-![Steps](./Screenshots/3.3.png)
+![Steps](./Executive_Summary_Images/3.2.png)
+![Steps](./Executive_Summary_Images/3.3.png)
 3. Users can set their desired minimum and maximum values for the selected nutrient.
-![Steps](./Screenshots/3.4.png)
+![Steps](./Executive_Summary_Images/3.4.png)
 4. Users are able to 'Clear Filters' to reset the criteria.
-![Steps](./Screenshots/3.5.png)
+![Steps](./Executive_Summary_Images/3.5.png)
 5. When users click on 'Apply Filter', the table is refreshed and displays only food items that fit the criteria. The criteria is also displayed for reference.
-![Steps](./Screenshots/3.6.png)
+![Steps](./Executive_Summary_Images/3.6.png)
 
 
 ---
@@ -96,16 +96,16 @@ This feature allows users to filter food items by nutritional content levels—l
 
 ### Screenshots
 1. As seen in the screenshot below, access the 'Select Filter' button through the main page.
-![Steps](./Screenshots/4.1.png)
+![Steps](./Executive_Summary_Images/4.1.png)
 2. Upon clicking 'Select Filter', a pop-up window will appear with a list of nutrients and different filter options.
-![Steps](./Screenshots/4.2.png)
-![Steps](./Screenshots/4.3.png)
+![Steps](./Executive_Summary_Images/4.2.png)
+![Steps](./Executive_Summary_Images/4.3.png)
 3. Users can set their desired nutritional content level.
-![Steps](./Screenshots/4.4.png)
+![Steps](./Executive_Summary_Images/4.4.png)
 4. If needed, users can 'Clear Filters' to reset the criteria.
-![Steps](./Screenshots/4.5.png)
+![Steps](./Executive_Summary_Images/4.5.png)
 5. Upon clicking 'Apply Filters', users are shown the a table of food items that fit the criteria chosen. The criteria is also displayed for reference.
-![Steps](./Screenshots/4.6.png)
+![Steps](./Executive_Summary_Images/4.6.png)
 
 
 ---
