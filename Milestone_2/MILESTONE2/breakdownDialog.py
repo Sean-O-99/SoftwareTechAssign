@@ -28,13 +28,38 @@ class MyDialog2 ( wx.Dialog ):
 
         bSizer5 = wx.BoxSizer( wx.HORIZONTAL )
 
-        self.m_button6 = wx.Button( self, wx.ID_ANY, _(u"Plot"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_button6 = wx.Button( self, wx.ID_ANY, _(u"Back"), wx.DefaultPosition, wx.DefaultSize, 0 )
         bSizer5.Add( self.m_button6, 0, wx.ALL, 5 )
 
-        self.m_staticText9 = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText9 = wx.StaticText( self, wx.ID_ANY, _(u"Carbohydrates:"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.m_staticText9.Wrap( -1 )
 
         bSizer5.Add( self.m_staticText9, 0, wx.ALL, 5 )
+
+        self.m_staticText91 = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText91.Wrap( -1 )
+
+        bSizer5.Add( self.m_staticText91, 0, wx.ALL, 5 )
+
+        self.m_staticText10 = wx.StaticText( self, wx.ID_ANY, _(u"Protein:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText10.Wrap( -1 )
+
+        bSizer5.Add( self.m_staticText10, 0, wx.ALL, 5 )
+
+        self.m_staticText11 = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText11.Wrap( -1 )
+
+        bSizer5.Add( self.m_staticText11, 0, wx.ALL, 5 )
+
+        self.m_staticText12 = wx.StaticText( self, wx.ID_ANY, _(u"Fat:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText12.Wrap( -1 )
+
+        bSizer5.Add( self.m_staticText12, 0, wx.ALL, 5 )
+
+        self.m_staticText13 = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.m_staticText13.Wrap( -1 )
+
+        bSizer5.Add( self.m_staticText13, 0, wx.ALL, 5 )
 
 
         bSizer4.Add( bSizer5, 0, wx.EXPAND, 0 )
@@ -49,13 +74,13 @@ class MyDialog2 ( wx.Dialog ):
         self.Centre( wx.BOTH )
 
         # Connect Events
-        self.m_button6.Bind( wx.EVT_BUTTON, self.clickOnPlot )
+        self.m_button6.Bind( wx.EVT_BUTTON, self.clickOnBack )
 
     def __del__( self ):
         pass
 
 
     # Virtual event handlers, override them in your derived class
-    def clickOnPlot( self, event ):
+    def clickOnBack( self, event ):
         event.Skip()
 
