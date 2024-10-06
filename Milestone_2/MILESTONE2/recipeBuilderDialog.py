@@ -453,7 +453,7 @@ class RecipeBuilder ( wx.Dialog ):
         # Connect Events
         self.recipebuilder_save_button.Bind( wx.EVT_BUTTON, self.recipebuilder_save )
         self.recipebuilder_delete_button.Bind( wx.EVT_BUTTON, self.recipebuilder_delete )
-        self.recipebuilder_added_items_list.Bind( wx.grid.EVT_GRID_CELL_RIGHT_CLICK, self.cell_menu )
+        self.recipebuilder_added_items_list.Bind( wx.grid.EVT_GRID_CELL_RIGHT_CLICK, self.open_cell_menu )
         self.Bind( wx.EVT_MENU, self.change_amount, id = self.menu_change_amount.GetId() )
         self.Bind( wx.EVT_MENU, self.remove_item, id = self.menu_remove_item.GetId() )
 
@@ -468,7 +468,7 @@ class RecipeBuilder ( wx.Dialog ):
     def recipebuilder_delete( self, event ):
         event.Skip()
 
-    def cell_menu( self, event ):
+    def open_cell_menu( self, event ):
         event.Skip()
 
     def change_amount( self, event ):

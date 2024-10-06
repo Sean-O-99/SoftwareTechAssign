@@ -2,12 +2,15 @@ import wx.grid
 import wx
 
 from recipeBuilderDialog import RecipeBuilder
+from setAmountDialogFunctionality import SetAmount
 
 class Recipe(RecipeBuilder):
     def __init__(self, parent):
         super().__init__(parent)
         self.current_recipe_name = ''
         self.current_recipe_items = []
+        self.right_click_row = None
+        self.right_click_col = None
 
 
     def insert_data_into_grid(self):
@@ -46,14 +49,31 @@ class Recipe(RecipeBuilder):
         print(self.current_recipe_items)
         self.EndModal(wx.ID_OK)
 
-    def cell_menu( self, event ):
-        event.Skip()
+    def open_cell_menu( self, event ):
+        self.right_click_row = event.GetRow()
+        self.right_click_col = event.GetCol()
+        self.PopupMenu(self.recipebuilder_popup_menu, event.GetPosition())
 
     def change_amount( self, event ):
-        event.Skip()
+        if self.right_click_row is not None and self.right_click_row < len(self.current_recipe_items):
+            amount = self.current_recipe_items[self.right_click_row]['Amount']
+
+            change_amount_dialog = SetAmount(self)
+            change_amount_dialog.current_amount = amount
+
+            if change_amount_dialog.ShowModal() == wx.ID_OK:
+                new_amount = change_amount_dialog.set_amount_value.GetValue()
+
+                if new_amount:
+                    self.current_recipe_items[self.right_click_row]['Amount'] = new_amount
+                else:
+                    wx.MessageBox("Valid amount not found.", "Error", wx.OK | wx.ICON_ERROR)
+            change_amount_dialog.Destroy()
 
     def remove_item( self, event ):
-        event.Skip()
+        if self.right_click_row >= 0:
+            self.recipebuilder_added_items_list.DeleteRows(self.right_click_row, 1)
+            del self.current_recipe_items[self.right_click_row]
 
     def RecipeBuilderOnContextMenu( self, event ):
         self.PopupMenu( self.recipebuilder_popup_menu, event.GetPosition() )
