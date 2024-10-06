@@ -1,7 +1,6 @@
 # Coverage Testing Report
 
-Please provide your GitHub repository link.
-### GitHub Repository URL: https://github.com/XXXX/XXXXX.git
+### GitHub Repository URL: https://github.com/Sean-O-99/SoftwareTechAssign.git
 
 ---
 
@@ -11,13 +10,14 @@ the five required features.</span> There is no need to test the GUI components. 
 You should perform statement coverage testing and branch coverage testing. For each type, provide a description and an analysis explaining how you evaluated the coverage.
 
 ## 1. **Test Summary**
-list all tested functions related to the five required features, for example:
-
-| **Tested Functions** |
-|----------------------|
-| `add(x1,x2)`         | 
-| `divide(x1,x2)`      |
-| `...`                |
+| **Tested Functions** | **Test Functions**                                           |
+|----------------------|--------------------------------------------------------------|
+| `on_search`          | `test_on_search_valid()` <br> `test_on_search_valid_empty()` |
+| `on_cell_click`      | `test_on_cell_click_valid()`                                 |
+| `clear_filters()`    | `test_clear_filters_valid()`                                 |
+| `apply_filters()`    | `apply_filters_valid()` <br> `apply_filters_invalid()`       |
+| `...`                | `...`                                                        |
+| `...`                | `...`                                                        |
 
 ---
 

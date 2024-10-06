@@ -9,6 +9,20 @@ def test_on_search_valid():
     actual_food = filtered_df["food"].to_list()
     assert actual_food == expected_food
 
+def test_on_search_valid_empty():
+    df = pd.DataFrame({"food": ["cheese pizza", "steak", "apple", "orange", "pepperoni pizza"],})
+    filtered_df = on_search(df, "")
+    expected_food = ["cheese pizza", "steak", "apple", "orange", "pepperoni pizza"]
+    actual_food = filtered_df["food"].to_list()
+    assert actual_food == expected_food
+
+def test_on_search_invalid():
+    df = pd.DataFrame({"food": ["cheese pizza", "steak", "apple", "orange", "pepperoni pizza"],})
+    filtered_df = on_search(df, "1234")
+    expected_food = [""]
+    actual_food = filtered_df["food"].to_list()
+    assert actual_food != expected_food
+
 def test_on_cell_click_valid():
     df = pd.DataFrame({
         "food": ["cheese pizza", "steak", "apple", "orange", "pepperoni pizza"],

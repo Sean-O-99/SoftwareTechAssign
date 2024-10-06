@@ -105,6 +105,7 @@ Users of the system are likely to be individuals who are health-conscious and in
 2.	Nutrition breakdown
 * System should display detailed nutritional information for food items.
 * Information must be presented in a clear way using visual elements like pie charts and bar graphs to facilitate better understanding.
+* <span style="color:red">Macro nutrient values in grams are displayed above the pie chart to enhance user understanding</span>
 
 3.	Nutrition range filter
 * Users should be able to select a nutrient (e.g. fat, sugar) and input minimum and maximum values (e.g. 5g to 15g).
@@ -216,7 +217,7 @@ Below is a system-level Use Case Diagram illustrating all required features:
 | Flow of Events | 1. User selects a food item from the search results. |
 |                | 2. System retrieves the nutritional information for selected food item. |
 |                | 3. System displays detailed nutritional information. |
-| Alternate Flow | 1. If nutritional information is not available, the system will display a message indicating the details are not available.
+| Alternate Flow | 1. If nutritional information is not available, the system will display a message indicating the details are not available. <span style="color:red">Cut Feature</span>
 |                | 2.  Users can return to search results to select another item. |
 
 
