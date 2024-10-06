@@ -4,6 +4,8 @@ import wx
 from recipeBuilderPage import RecipeBuilder
 
 class Recipe(RecipeBuilder):
+    def __init__(self, parent=None):
+        super().__init__(parent)
 
 
     def recipebuilder_save(self, event):
