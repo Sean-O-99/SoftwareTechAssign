@@ -1,6 +1,5 @@
 import wx
 
-from recipeBuilderDialogFunctionality import Recipe
 from setAmountDialog import change_amount
 class SetAmount(change_amount):
     def __init__(self, parent):
