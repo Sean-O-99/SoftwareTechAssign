@@ -2,6 +2,8 @@ import wx
 import wx.grid
 import pandas as pd
 import re
+
+from matplotlib import pyplot as plt
 from wx.lib.agw.aui import right
 from wx.lib.masked import value
 
