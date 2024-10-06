@@ -56,19 +56,18 @@ class FoodDataTable(MyFrame2):
 
     def on_search(self, event):
         event.Skip()
-        keywordValue = self.m_textCtrl1.GetValue()
-        keyword = keywordValue.lower()
-        searchFood = self.df["food"]
+        keyword = self.m_textCtrl1.GetValue().lower
+        search_food = self.df["food"]
         index = []
 
-        for food in searchFood:
+        for food in search_food:
             if re.search(keyword, food):
                 index.append(True)
             else:
                 index.append(False)
-        dfFiltered = self.df[index]
+        filtered_df = self.df[index]
         self.m_grid1.ClearGrid()
-        self.table = DataTable(dfFiltered)
+        self.table = DataTable(filtered_df)
         self.m_grid1.SetTable(self.table, takeOwnership=True)
         self.m_grid1.AutoSize()
 
