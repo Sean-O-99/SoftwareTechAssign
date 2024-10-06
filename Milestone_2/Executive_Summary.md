@@ -112,19 +112,35 @@ This feature allows users to filter food items by nutritional content levels—l
 
 ---
 
-## 5. [Feature 5 Name]
+## 5. [Recipe Builder]
 ### Description  
-Briefly describe what this feature does.
+Builds a recipe by adding items from the main display table and then totals the nutrients of the items in the list. Allowing the user to evaluate the nutrients
+of a select few items.
 
 ### Steps
-1. Step-by-step instructions for using this feature.
-2. Add additional steps as needed.
+1. User can click New Recipe to begin creating a new recipe item. User Selects a name and saves the recipe.
+![Steps](./Executive_Summary_Images/5.1.png)
 
-### Screenshots
-Include screenshots for each step demonstrating the use of this feature.    
-![1](./visual_design.png)
+2. User can right click an item in the table to bring up a menu and choose to add an item to the current recipe.
+![Steps](./Executive_Summary_Images/5.2.png)
 
-![2](./visual_design.png)
+3. User clicks the view recipe button when they have finished adding items to the recipe.
+![Steps](./Executive_Summary_Images/5.3.png)
+
+4. Once in the recipe builder view the user can observe the total nutrients of their accumulated items
+![Steps](./Executive_Summary_Images/5.4.png)
+
+5. User can choose to remove an item from the recipe by right clicking it in the table and selecting remove item.
+![Steps](./Executive_Summary_Images/5.5.png)
+
+6. User can choose to increase the amount of a selected item to match the amount of serves in their desired recipe.
+![Steps](./Executive_Summary_Images/5.6.png)
+
+7. User can rename their recipe and press save. It will save any changes to the list as well as name changes and move back to the main view.
+![Steps](./Executive_Summary_Images/5.7.png)
+
+8. User can choose to delete their recipe clearing any items and moving the user back to the main view.
+![Steps](./Executive_Summary_Images/5.8.png)
 
 
 ---
