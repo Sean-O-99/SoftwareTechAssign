@@ -20,10 +20,10 @@ delete_recipe_item_ID = 6000
 ## Class RecipeBuilder
 ###########################################################################
 
-class RecipeBuilder ( wx.Frame ):
+class RecipeBuilder ( wx.Dialog ):
 
     def __init__( self, parent ):
-        wx.Frame.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"Recipe Builder"), pos = wx.DefaultPosition, size = wx.Size( 640,480 ), style = wx.DEFAULT_FRAME_STYLE|wx.TAB_TRAVERSAL )
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"Recipe View"), pos = wx.DefaultPosition, size = wx.Size( 722,498 ), style = wx.DEFAULT_DIALOG_STYLE )
 
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
@@ -192,75 +192,75 @@ class RecipeBuilder ( wx.Frame ):
 
         bSizer16.Add( self.B_total, 0, wx.ALL, 5 )
 
-        self.B-11_label = wx.StaticText( self, wx.ID_ANY, _(u"B-11:"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.B-11_label.Wrap( -1 )
+        self.b_11_label = wx.StaticText( self, wx.ID_ANY, _(u"B-11:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.b_11_label.Wrap( -1 )
 
-        bSizer16.Add( self.B-11_label, 0, wx.ALL, 5 )
+        bSizer16.Add( self.b_11_label, 0, wx.ALL, 5 )
 
-        self.B-11_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.B-11_total.Wrap( -1 )
+        self.b_11_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.b_11_total.Wrap( -1 )
 
-        bSizer16.Add( self.B-11_total, 0, wx.ALL, 5 )
+        bSizer16.Add( self.b_11_total, 0, wx.ALL, 5 )
 
-        self.B-12_label = wx.StaticText( self, wx.ID_ANY, _(u"B-12:"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.B-12_label.Wrap( -1 )
+        self.b_12_label = wx.StaticText( self, wx.ID_ANY, _(u"B-12:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.b_12_label.Wrap( -1 )
 
-        bSizer16.Add( self.B-12_label, 0, wx.ALL, 5 )
+        bSizer16.Add( self.b_12_label, 0, wx.ALL, 5 )
 
-        self.B-12_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.B-12_total.Wrap( -1 )
+        self.b_12_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.b_12_total.Wrap( -1 )
 
-        bSizer16.Add( self.B-12_total, 0, wx.ALL, 5 )
+        bSizer16.Add( self.b_12_total, 0, wx.ALL, 5 )
 
-        self.B-2_label = wx.StaticText( self, wx.ID_ANY, _(u"B-2:"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.B-2_label.Wrap( -1 )
+        self.b_2_label = wx.StaticText( self, wx.ID_ANY, _(u"B-2:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.b_2_label.Wrap( -1 )
 
-        bSizer16.Add( self.B-2_label, 0, wx.ALL, 5 )
+        bSizer16.Add( self.b_2_label, 0, wx.ALL, 5 )
 
-        self.B-2_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.B-2_total.Wrap( -1 )
+        self.b_2_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.b_2_total.Wrap( -1 )
 
-        bSizer16.Add( self.B-2_total, 0, wx.ALL, 5 )
+        bSizer16.Add( self.b_2_total, 0, wx.ALL, 5 )
 
-        self.B-3_label = wx.StaticText( self, wx.ID_ANY, _(u"B-3:"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.B-3_label.Wrap( -1 )
+        self.b_3_label = wx.StaticText( self, wx.ID_ANY, _(u"B-3:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.b_3_label.Wrap( -1 )
 
-        bSizer16.Add( self.B-3_label, 0, wx.ALL, 5 )
+        bSizer16.Add( self.b_3_label, 0, wx.ALL, 5 )
 
-        self.B-3_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.B-3_total.Wrap( -1 )
+        self.b_3_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.b_3_total.Wrap( -1 )
 
-        bSizer16.Add( self.B-3_total, 0, wx.ALL, 5 )
+        bSizer16.Add( self.b_3_total, 0, wx.ALL, 5 )
 
-        self.B-5_label = wx.StaticText( self, wx.ID_ANY, _(u"B-5:"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.B-5_label.Wrap( -1 )
+        self.b_5_label = wx.StaticText( self, wx.ID_ANY, _(u"B-5:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.b_5_label.Wrap( -1 )
 
-        bSizer16.Add( self.B-5_label, 0, wx.ALL, 5 )
+        bSizer16.Add( self.b_5_label, 0, wx.ALL, 5 )
 
-        self.B-5_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.B-5_total.Wrap( -1 )
+        self.b_5_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.b_5_total.Wrap( -1 )
 
-        bSizer16.Add( self.B-5_total, 0, wx.ALL, 5 )
+        bSizer16.Add( self.b_5_total, 0, wx.ALL, 5 )
 
-        self.B-6_label = wx.StaticText( self, wx.ID_ANY, _(u"B-6:"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.B-6_label.Wrap( -1 )
+        self.b_6_label = wx.StaticText( self, wx.ID_ANY, _(u"B-6:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.b_6_label.Wrap( -1 )
 
-        bSizer16.Add( self.B-6_label, 0, wx.ALL, 5 )
+        bSizer16.Add( self.b_6_label, 0, wx.ALL, 5 )
 
-        self.B-6_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.B-6_total.Wrap( -1 )
+        self.b_6_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.b_6_total.Wrap( -1 )
 
-        bSizer16.Add( self.B-6_total, 0, wx.ALL, 5 )
+        bSizer16.Add( self.b_6_total, 0, wx.ALL, 5 )
 
-        self.C_label = wx.StaticText( self, wx.ID_ANY, _(u"C:"), wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.C_label.Wrap( -1 )
+        self.c_label = wx.StaticText( self, wx.ID_ANY, _(u"C:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.c_label.Wrap( -1 )
 
-        bSizer16.Add( self.C_label, 0, wx.ALL, 5 )
+        bSizer16.Add( self.c_label, 0, wx.ALL, 5 )
 
-        self.C_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
-        self.C_total.Wrap( -1 )
+        self.c_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.c_total.Wrap( -1 )
 
-        bSizer16.Add( self.C_total, 0, wx.ALL, 5 )
+        bSizer16.Add( self.c_total, 0, wx.ALL, 5 )
 
         self.D_label = wx.StaticText( self, wx.ID_ANY, _(u"D:"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.D_label.Wrap( -1 )

@@ -10,7 +10,7 @@ from wx.lib.masked import value
 from mainPage import MyFrame2 as MyFrame2
 from breakdownDialogFunctionality import NutritionalDialog
 from filterDialogFunctionality import FilterDialog
-from createRecipeDialogFunctionality import NameRecipeDialog
+from recipeBuilderDialogFunctionality import Recipe
 
 class DataTable(wx.grid.GridTableBase):
     def __init__(self, data=None):
@@ -226,6 +226,25 @@ class FoodDataTable(MyFrame2):
         self.clicked_row = event.GetRow()
         print(self.clicked_row)
         self.PopupMenu(self.add_menu, event.GetPosition())
+
+    def view_recipe( self, event ):
+        # extract the current setup
+        recipe_name = self.current_recipe_name
+        recipe_items = self.current_recipe_items
+
+        # create the dialog
+        recipe_builder_dialog = Recipe(self)
+
+        # pass the data to the dialog
+        recipe_builder_dialog.current_recipe_name = recipe_name
+        recipe_builder_dialog.current_recipe_items = recipe_items
+
+        # show the dialog
+        recipe_builder_dialog.ShowModal()
+
+        # update the values in main if made after closing dialog
+        self.current_recipe_name = recipe_builder_dialog.current_recipe_name
+        self.current_recipe_items = recipe_builder_dialog.current_recipe_items
 
 if __name__ == "__main__":
     app = wx.App()
