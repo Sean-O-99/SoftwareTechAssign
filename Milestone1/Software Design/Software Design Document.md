@@ -217,7 +217,7 @@ Below is a system-level Use Case Diagram illustrating all required features:
 | Flow of Events | 1. User selects a food item from the search results. |
 |                | 2. System retrieves the nutritional information for selected food item. |
 |                | 3. System displays detailed nutritional information. |
-| Alternate Flow | 1. If nutritional information is not available, the system will display a message indicating the details are not available.
+| Alternate Flow | 1. If nutritional information is not available, the system will display a message indicating the details are not available. <span style="color:red">Cut Feature</span>
 |                | 2.  Users can return to search results to select another item. |
 
 
