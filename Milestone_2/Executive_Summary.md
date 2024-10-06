@@ -40,12 +40,12 @@ This feature allows users to see a more detailed and visual display of their sel
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.  
 
-
-![2](./visual_design.png)
 #### Step 1
 ![1](./Executive_Summary_Images/nutritional_breakdown_1.png)
 #### Step 2
 ![2](./Executive_Summary_Images/nutritional_breakdown_2.png)
+#### Step 3
+![3](./Executive_Summary_Images/nutritional_breakdown_3.png)
 
 ---
 
