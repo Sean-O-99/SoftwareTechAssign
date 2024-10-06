@@ -9,12 +9,13 @@ You should use your software to prepare an executive summary as outlined below f
 
 ## 1. Food Search
 ### Description  
-This feature allows the user to search the connected database for a food items based on an input string they enter.
+This feature allows users to search the connected database for food items based on an input string they enter. This will help users to find out more about the nutritional information of their food.
 
 ### Steps
-1. User clicks on the text box to the right of the "Search:"
-2. The user enters their search phrase
-3. The program will display related items based on that search
+1. User clicks on the text box to the right of the "Search:".
+2. The user enters their search phrase.
+3. The program will display certain items based on that search.
+4. The user can enter a new search term at any time.
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature. 
@@ -29,21 +30,22 @@ Include screenshots for each step demonstrating the use of this feature.
 
 ## 2. Nutrition Breakdown
 ### Description  
-This feature allows the user to see a more detailed and visual display of their selected food items nutrition.
+This feature allows users to see a more detailed and visual display of their selected food items nutrition. This will help the users to visualise the nutritional makeup of their food and understand its composition.
 
 ### Steps
-1. User clicks on a food item they want to inspect
-2. The program displays the selected items most important macro and micronutrient values
+1. User clicks on the cell of a food item they want to inspect.
+2. The program displays the selected items most important macro and micronutrient values.
+3. The user clicks the exit button on the top left of the window to exit the view
 
 ### Screenshots
 Include screenshots for each step demonstrating the use of this feature.  
 
-
-![2](./visual_design.png)
 #### Step 1
 ![1](./Executive_Summary_Images/nutritional_breakdown_1.png)
 #### Step 2
 ![2](./Executive_Summary_Images/nutritional_breakdown_2.png)
+#### Step 3
+![3](./Executive_Summary_Images/nutritional_breakdown_3.png)
 
 ---
 
