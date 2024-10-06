@@ -23,7 +23,7 @@ delete_recipe_item_ID = 6000
 class RecipeBuilder ( wx.Dialog ):
 
     def __init__( self, parent ):
-        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"Recipe View"), pos = wx.DefaultPosition, size = wx.Size( 778,636 ), style = wx.DEFAULT_DIALOG_STYLE )
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"Recipe View"), pos = wx.DefaultPosition, size = wx.Size( 957,636 ), style = wx.DEFAULT_DIALOG_STYLE )
 
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
@@ -132,6 +132,26 @@ class RecipeBuilder ( wx.Dialog ):
 
         bSizer14.Add( self.cholesterol_total, 0, wx.ALL, 5 )
 
+        self.water_label = wx.StaticText( self, wx.ID_ANY, _(u"Water:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.water_label.Wrap( -1 )
+
+        bSizer14.Add( self.water_label, 0, wx.ALL, 5 )
+
+        self.water_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.water_total.Wrap( -1 )
+
+        bSizer14.Add( self.water_total, 0, wx.ALL, 5 )
+
+        self.sodium_label = wx.StaticText( self, wx.ID_ANY, _(u"Sodium:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.sodium_label.Wrap( -1 )
+
+        bSizer14.Add( self.sodium_label, 0, wx.ALL, 5 )
+
+        self.sodium_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.sodium_total.Wrap( -1 )
+
+        bSizer14.Add( self.sodium_total, 0, wx.ALL, 5 )
+
 
         bSizer13.Add( bSizer14, 0, wx.EXPAND, 5 )
 
@@ -141,6 +161,11 @@ class RecipeBuilder ( wx.Dialog ):
         self.fats_label.Wrap( -1 )
 
         bSizer15.Add( self.fats_label, 0, wx.ALL, 5 )
+
+        self.fats_total = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.fats_total.Wrap( -1 )
+
+        bSizer15.Add( self.fats_total, 0, wx.ALL, 5 )
 
         self.fats_sat_label = wx.StaticText( self, wx.ID_ANY, _(u"Saturated: "), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.fats_sat_label.Wrap( -1 )
@@ -414,7 +439,7 @@ class RecipeBuilder ( wx.Dialog ):
         self.recipebuilder_added_items_list = wx.grid.Grid( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 
         # Grid
-        self.recipebuilder_added_items_list.CreateGrid( 5, 36 )
+        self.recipebuilder_added_items_list.CreateGrid( 1, 36 )
         self.recipebuilder_added_items_list.EnableEditing( True )
         self.recipebuilder_added_items_list.EnableGridLines( True )
         self.recipebuilder_added_items_list.EnableDragGridSize( False )

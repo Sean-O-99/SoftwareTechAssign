@@ -240,6 +240,8 @@ class FoodDataTable(MyFrame2):
         recipe_builder_dialog.recipebuilder_name.SetValue(self.current_recipe_name)
         recipe_builder_dialog.setup_grid()
         recipe_builder_dialog.insert_data_into_grid()
+        print(recipe_builder_dialog.current_recipe_items)
+        recipe_builder_dialog.update_recipe_nutrients()
 
         # show the dialog
         recipe_builder_dialog.ShowModal()
