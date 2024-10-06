@@ -11,6 +11,7 @@ from mainPage import MyFrame2 as MyFrame2
 from breakdownDialogFunctionality import NutritionalDialog
 from filterDialogFunctionality import FilterDialog
 from recipeBuilderDialogFunctionality import Recipe
+from createRecipeDialogFunctionality import NameRecipeDialog
 
 class DataTable(wx.grid.GridTableBase):
     def __init__(self, data=None):
@@ -224,7 +225,6 @@ class FoodDataTable(MyFrame2):
             wx.MessageBox("Invalid row selected.")
     def on_cell_right_click( self, event ):
         self.clicked_row = event.GetRow()
-        print(self.clicked_row)
         self.PopupMenu(self.add_menu, event.GetPosition())
 
     def view_recipe( self, event ):
@@ -238,6 +238,9 @@ class FoodDataTable(MyFrame2):
         # pass the data to the dialog
         recipe_builder_dialog.current_recipe_name = recipe_name
         recipe_builder_dialog.current_recipe_items = recipe_items
+        recipe_builder_dialog.recipebuilder_name.SetLabel(self.current_recipe_name)
+        recipe_builder_dialog.setup_grid()
+        recipe_builder_dialog.insert_data_into_grid()
 
         # show the dialog
         recipe_builder_dialog.ShowModal()
@@ -245,6 +248,9 @@ class FoodDataTable(MyFrame2):
         # update the values in main if made after closing dialog
         self.current_recipe_name = recipe_builder_dialog.current_recipe_name
         self.current_recipe_items = recipe_builder_dialog.current_recipe_items
+        self.current_recipe_value.SetLabel(self.current_recipe_name)
+        print(self.current_recipe_name)
+        print(self.current_recipe_items)
 
 if __name__ == "__main__":
     app = wx.App()

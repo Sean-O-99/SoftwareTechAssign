@@ -23,7 +23,7 @@ delete_recipe_item_ID = 6000
 class RecipeBuilder ( wx.Dialog ):
 
     def __init__( self, parent ):
-        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"Recipe View"), pos = wx.DefaultPosition, size = wx.Size( 722,498 ), style = wx.DEFAULT_DIALOG_STYLE )
+        wx.Dialog.__init__ ( self, parent, id = wx.ID_ANY, title = _(u"Recipe View"), pos = wx.DefaultPosition, size = wx.Size( 778,636 ), style = wx.DEFAULT_DIALOG_STYLE )
 
         self.SetSizeHints( wx.DefaultSize, wx.DefaultSize )
 
@@ -55,10 +55,20 @@ class RecipeBuilder ( wx.Dialog ):
 
         bSizer13 = wx.BoxSizer( wx.VERTICAL )
 
-        self.recipe_summary = wx.StaticText( self, wx.ID_ANY, _(u"Recipe Summary:"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        bSizer21 = wx.BoxSizer( wx.VERTICAL )
+
+        self.recipe_summary = wx.StaticText( self, wx.ID_ANY, _(u"Nutrient Summary for:"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.recipe_summary.Wrap( -1 )
 
-        bSizer13.Add( self.recipe_summary, 0, wx.ALL, 5 )
+        bSizer21.Add( self.recipe_summary, 0, wx.ALL, 5 )
+
+        self.recipe_summary_value = wx.StaticText( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.recipe_summary_value.Wrap( -1 )
+
+        bSizer21.Add( self.recipe_summary_value, 0, wx.ALL, 5 )
+
+
+        bSizer13.Add( bSizer21, 0, wx.EXPAND, 5 )
 
         bSizer14 = wx.BoxSizer( wx.HORIZONTAL )
 
@@ -82,7 +92,7 @@ class RecipeBuilder ( wx.Dialog ):
 
         bSizer14.Add( self.carbs_total, 0, wx.ALL, 5 )
 
-        self.protein_label = wx.StaticText( self, wx.ID_ANY, _(u"Protein"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.protein_label = wx.StaticText( self, wx.ID_ANY, _(u"Protein:"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.protein_label.Wrap( -1 )
 
         bSizer14.Add( self.protein_label, 0, wx.ALL, 5 )
@@ -92,7 +102,7 @@ class RecipeBuilder ( wx.Dialog ):
 
         bSizer14.Add( self.protein_total, 0, wx.ALL, 5 )
 
-        self.sugars_label = wx.StaticText( self, wx.ID_ANY, _(u"Sugars"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.sugars_label = wx.StaticText( self, wx.ID_ANY, _(u"Sugars:"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.sugars_label.Wrap( -1 )
 
         bSizer14.Add( self.sugars_label, 0, wx.ALL, 5 )
@@ -102,7 +112,7 @@ class RecipeBuilder ( wx.Dialog ):
 
         bSizer14.Add( self.sugars_total, 0, wx.ALL, 5 )
 
-        self.fiber_label = wx.StaticText( self, wx.ID_ANY, _(u"Dietary Fiber"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.fiber_label = wx.StaticText( self, wx.ID_ANY, _(u"Dietary Fiber:"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.fiber_label.Wrap( -1 )
 
         bSizer14.Add( self.fiber_label, 0, wx.ALL, 5 )
@@ -112,7 +122,7 @@ class RecipeBuilder ( wx.Dialog ):
 
         bSizer14.Add( self.fiber_total, 0, wx.ALL, 5 )
 
-        self.cholesterol_label = wx.StaticText( self, wx.ID_ANY, _(u"Cholesterol"), wx.DefaultPosition, wx.DefaultSize, 0 )
+        self.cholesterol_label = wx.StaticText( self, wx.ID_ANY, _(u"Cholesterol:"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.cholesterol_label.Wrap( -1 )
 
         bSizer14.Add( self.cholesterol_label, 0, wx.ALL, 5 )
@@ -123,7 +133,7 @@ class RecipeBuilder ( wx.Dialog ):
         bSizer14.Add( self.cholesterol_total, 0, wx.ALL, 5 )
 
 
-        bSizer13.Add( bSizer14, 1, wx.EXPAND, 5 )
+        bSizer13.Add( bSizer14, 0, wx.EXPAND, 5 )
 
         bSizer15 = wx.BoxSizer( wx.HORIZONTAL )
 
@@ -163,7 +173,7 @@ class RecipeBuilder ( wx.Dialog ):
         bSizer15.Add( self.fats_poly_total, 0, wx.ALL, 5 )
 
 
-        bSizer13.Add( bSizer15, 1, wx.EXPAND, 5 )
+        bSizer13.Add( bSizer15, 0, wx.EXPAND, 5 )
 
         bSizer16 = wx.BoxSizer( wx.HORIZONTAL )
 
@@ -293,7 +303,7 @@ class RecipeBuilder ( wx.Dialog ):
         bSizer16.Add( self.K_total, 0, wx.ALL, 5 )
 
 
-        bSizer13.Add( bSizer16, 1, wx.EXPAND, 5 )
+        bSizer13.Add( bSizer16, 0, wx.EXPAND, 5 )
 
         bSizer17 = wx.BoxSizer( wx.HORIZONTAL )
 
@@ -368,7 +378,7 @@ class RecipeBuilder ( wx.Dialog ):
         bSizer17.Add( self.potassium_total, 0, wx.ALL, 5 )
 
 
-        bSizer13.Add( bSizer17, 1, wx.EXPAND, 5 )
+        bSizer13.Add( bSizer17, 0, wx.EXPAND, 5 )
 
         bSizer18 = wx.BoxSizer( wx.HORIZONTAL )
 
@@ -393,7 +403,7 @@ class RecipeBuilder ( wx.Dialog ):
         bSizer18.Add( self.zinc_total, 0, wx.ALL, 5 )
 
 
-        bSizer13.Add( bSizer18, 1, wx.EXPAND, 5 )
+        bSizer13.Add( bSizer18, 0, wx.EXPAND, 5 )
 
 
         bSizer10.Add( bSizer13, 1, wx.EXPAND, 5 )
@@ -404,7 +414,7 @@ class RecipeBuilder ( wx.Dialog ):
         self.recipebuilder_added_items_list = wx.grid.Grid( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
 
         # Grid
-        self.recipebuilder_added_items_list.CreateGrid( 5, 5 )
+        self.recipebuilder_added_items_list.CreateGrid( 5, 36 )
         self.recipebuilder_added_items_list.EnableEditing( True )
         self.recipebuilder_added_items_list.EnableGridLines( True )
         self.recipebuilder_added_items_list.EnableDragGridSize( False )
@@ -423,12 +433,15 @@ class RecipeBuilder ( wx.Dialog ):
 
         # Cell Defaults
         self.recipebuilder_added_items_list.SetDefaultCellAlignment( wx.ALIGN_LEFT, wx.ALIGN_TOP )
-        bSizer9.Add( self.recipebuilder_added_items_list, 0, wx.ALL, 5 )
+        bSizer9.Add( self.recipebuilder_added_items_list, 1, wx.ALL|wx.EXPAND, 5 )
 
 
         self.SetSizer( bSizer9 )
         self.Layout()
         self.recipebuilder_popup_menu = wx.Menu()
+        self.menu_change_amount = wx.MenuItem( self.recipebuilder_popup_menu, wx.ID_ANY, _(u"Change Food Amount"), wx.EmptyString, wx.ITEM_NORMAL )
+        self.recipebuilder_popup_menu.Append( self.menu_change_amount )
+
         self.menu_remove_item = wx.MenuItem( self.recipebuilder_popup_menu, delete_recipe_item_ID, _(u"Remove Item"), wx.EmptyString, wx.ITEM_NORMAL )
         self.recipebuilder_popup_menu.Append( self.menu_remove_item )
 
@@ -441,6 +454,8 @@ class RecipeBuilder ( wx.Dialog ):
         self.recipebuilder_save_button.Bind( wx.EVT_BUTTON, self.recipebuilder_save )
         self.recipebuilder_delete_button.Bind( wx.EVT_BUTTON, self.recipebuilder_delete )
         self.recipebuilder_added_items_list.Bind( wx.grid.EVT_GRID_CELL_RIGHT_CLICK, self.cell_menu )
+        self.Bind( wx.EVT_MENU, self.change_amount, id = self.menu_change_amount.GetId() )
+        self.Bind( wx.EVT_MENU, self.remove_item, id = self.menu_remove_item.GetId() )
 
     def __del__( self ):
         pass
@@ -454,6 +469,12 @@ class RecipeBuilder ( wx.Dialog ):
         event.Skip()
 
     def cell_menu( self, event ):
+        event.Skip()
+
+    def change_amount( self, event ):
+        event.Skip()
+
+    def remove_item( self, event ):
         event.Skip()
 
     def RecipeBuilderOnContextMenu( self, event ):
