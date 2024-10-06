@@ -7,7 +7,7 @@ from wx.lib.masked import value
 from mainPage import MyFrame2 as MyFrame2
 from breakdownDialogFunctionality import NutritionalDialog
 from filterDialogFunctionality import FilterDialog
-import matplotlib.pyplot as plt
+from createRecipeDialogFunctionality import NameRecipeDialog
 
 class DataTable(wx.grid.GridTableBase):
     def __init__(self, data=None):
@@ -38,11 +38,18 @@ class FoodDataTable(MyFrame2):
     def __init__(self, parent=None):
         super().__init__(parent)
         self.df = pd.read_csv("./Food_Nutrition_Dataset.csv")
+        self.filtered_df = None
         self.table = DataTable(self.df)
+        self.current_recipe_name = ''
+        self.current_recipe_items = []
+        self.current_recipe_value.SetLabel(self.current_recipe_name)
         self.m_grid1.SetTable(self.table, takeOwnership=True)
         self.m_grid1.AutoSize()
+        self.clicked_row = None
         self.Show(True)
         self.Layout()
+
+
 
     def on_search(self, event):
         keyword = self.m_textCtrl1.GetValue().lower()
@@ -165,6 +172,7 @@ class FoodDataTable(MyFrame2):
             threshold = highest_value * 0.66
             filtered_df = filtered_df[filtered_df[nutrient] >= threshold]
 
+        self.filtered_df = filtered_df
         return filtered_df
 
     def update_grid_with_filtered_data(self, filtered_df):
@@ -173,6 +181,44 @@ class FoodDataTable(MyFrame2):
         self.m_grid1.AutoSize()
         self.Layout()
 
+    def create_recipe(self, event):
+        dialog = NameRecipeDialog(self)
+        if dialog.ShowModal() == wx.ID_OK:
+            recipe_name = dialog.createrecipe_name_field.GetValue()
+            self.current_recipe_name = recipe_name
+            self.current_recipe_value.SetLabel(self.current_recipe_name)
+            # ensure the list is clear
+            self.current_recipe_items = []
+        dialog.Destroy()
+
+    def add_item_to_recipe(self, event):
+        if hasattr(self, 'clicked_row') and 0 <= self.clicked_row < self.m_grid1.GetNumberRows():
+            row_index = self.clicked_row
+            selected_df = self.filtered_df if self.filtered_df is not None else self.df
+            food_item = selected_df.iloc[row_index]
+
+            if any(item['food'] == food_item['food'] for item in self.current_recipe_items):
+                wx.MessageBox(f"{food_item['food']} is already part of the current recipe.")
+                return
+
+            food_item['amount'] = 1
+
+            #rearrange dictionary to prep for recipe
+            food_item = {
+                'food': food_item['food'],
+                'amount': food_item['amount'],
+                **{k: v for k, v in food_item.items() if k not in ['food', 'amount']}
+            }
+            self.current_recipe_items.append(food_item)
+
+            print(food_item)
+            wx.MessageBox("Added item to the recipe")
+        else:
+            wx.MessageBox("Invalid row selected.")
+    def on_cell_right_click( self, event ):
+        self.clicked_row = event.GetRow()
+        print(self.clicked_row)
+        self.PopupMenu(self.add_menu, event.GetPosition())
 
 if __name__ == "__main__":
     app = wx.App()
