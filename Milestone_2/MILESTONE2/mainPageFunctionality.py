@@ -1,6 +1,7 @@
 import wx
 import wx.grid
 import pandas as pd
+import re
 from wx.lib.agw.aui import right
 from wx.lib.masked import value
 
@@ -45,18 +46,22 @@ class FoodDataTable(MyFrame2):
         self.Layout()
 
     def on_search(self, event):
-        keyword = self.m_textCtrl1.GetValue().lower()
-        if keyword:
-            self.filtered_df = self.df[
-                self.df.apply(lambda row: row.astype(str).str.contains(keyword, case=False).any(), axis=1)
-            ]
-        else:
-            self.filtered_df = self.df  # Reset if search is cleared
+        event.Skip()
+        keywordValue = self.m_textCtrl1.GetValue()
+        keyword = keywordValue.lower()
+        searchFood = self.df["food"]
+        index = []
 
-        self.table = DataTable(self.filtered_df)
+        for food in searchFood:
+            if re.search(keyword, food):
+                index.append(True)
+            else:
+                index.append(False)
+        dfFiltered = self.df[index]
+        self.m_grid1.ClearGrid()
+        self.table = DataTable(dfFiltered)
         self.m_grid1.SetTable(self.table, takeOwnership=True)
         self.m_grid1.AutoSize()
-        self.Layout()
 
     def on_cell_click(self, event):
         row = event.GetRow()
