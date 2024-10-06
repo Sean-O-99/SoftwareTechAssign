@@ -55,7 +55,6 @@ class FoodDataTable(MyFrame2):
 
 
     def on_search(self, event):
-        event.Skip()
         keyword = self.m_textCtrl1.GetValue().lower()
         search_food = self.df["food"]
         index = []
@@ -94,9 +93,9 @@ class FoodDataTable(MyFrame2):
         zinc = nutritional_items[32]
 
         macronutrients = {
-            fat[0] : fat[1],
-            carbs[0] : carbs[1],
-            protein[0] : protein[1]
+            fat[0]: fat[1],
+            carbs[0]: carbs[1],
+            protein[0]: protein[1]
         }
 
         micronutrients = {
@@ -104,7 +103,7 @@ class FoodDataTable(MyFrame2):
             vitamin_b6[0]: vitamin_b6[1],
             vitamin_b12[0]: vitamin_b12[1],
             vitamin_c[0]: vitamin_c[1],
-            vitamin_d[0] : vitamin_d[1],
+            vitamin_d[0]: vitamin_d[1],
             calcium[0]: calcium[1],
             iron[0]: iron[1],
             magnesium[0]: magnesium[1],
@@ -135,8 +134,6 @@ class FoodDataTable(MyFrame2):
 
         dialog = NutritionalDialog(None, food_item, fig,fat, carbs, protein)
         dialog.ShowModal()
-
-        # return food_item, macronutrients
 
     def open_filter_dialog(self, event):
         dialog = FilterDialog(None)
