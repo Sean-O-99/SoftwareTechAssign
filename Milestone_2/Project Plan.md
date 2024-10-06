@@ -77,7 +77,7 @@ The deliverables of this project will include the completed nutritional visualis
 
 ## 2. Work Breakdown Structure
 
-![WBS](../../Milestone1/Work%20Breakdown%20Structure/WBS3.png)
+![WBS](../Milestone1/Work%20Breakdown%20Structure/WBS3.png)
 ## 3. Activity Definition Estimation
 
 Define the activities required for your project based on the WBS, and assign responsibilities to team members. Each activity should be numbered and correspond with your Gantt chart. Provide estimated durations for each activity to facilitate Gantt chart preparation.
@@ -119,4 +119,4 @@ Define the activities required for your project based on the WBS, and assign res
 
 
 ## 4. Gantt Chart
-![Gantt Chart](../../Milestone1/Gantt%20Chart/GanttChart.png)
+![Gantt Chart](../Milestone1/Gantt%20Chart/GanttChart2.png)

@@ -189,7 +189,7 @@ This section provides a detailed overview of the capabilities and features of th
 ### 2.3 Use Case Diagram
 Below is a system-level Use Case Diagram illustrating all required features:
 
-![Use Case Diagram](../Use%20Case/UCD.png)
+![Use Case Diagram](../Milestone1/Use%20Case/UCD.png)
 
 
 ### 2.4 Use Cases
