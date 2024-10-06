@@ -56,7 +56,7 @@ class FoodDataTable(MyFrame2):
 
     def on_search(self, event):
         event.Skip()
-        keyword = self.m_textCtrl1.GetValue().lower
+        keyword = self.m_textCtrl1.GetValue().lower()
         search_food = self.df["food"]
         index = []
 
