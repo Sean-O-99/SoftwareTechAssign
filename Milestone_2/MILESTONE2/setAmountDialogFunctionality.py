@@ -11,4 +11,4 @@ class SetAmount(change_amount):
         if current_amount:
             self.EndModal(wx.ID_OK)
         else:
-            wx.MessageBox("Please enter a name.", "Error", wx.OK | wx.ICON_ERROR)
+            wx.MessageBox("Please enter a valid amount.", "Error", wx.OK | wx.ICON_ERROR)
