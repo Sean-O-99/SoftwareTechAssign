@@ -55,7 +55,7 @@ class RecipeBuilder ( wx.Dialog ):
 
         bSizer13 = wx.BoxSizer( wx.VERTICAL )
 
-        bSizer21 = wx.BoxSizer( wx.VERTICAL )
+        bSizer21 = wx.BoxSizer( wx.HORIZONTAL )
 
         self.recipe_summary = wx.StaticText( self, wx.ID_ANY, _(u"Nutrient Summary for:"), wx.DefaultPosition, wx.DefaultSize, 0 )
         self.recipe_summary.Wrap( -1 )

@@ -208,18 +208,20 @@ class FoodDataTable(MyFrame2):
             if any(item['food'] == food_item['food'] for item in self.current_recipe_items):
                 wx.MessageBox(f"{food_item['food']} is already part of the current recipe.")
                 return
+            if not self.current_recipe_name:
+                wx.MessageBox("You need to create a recipe before adding items.")
+                return
 
-            food_item['amount'] = 1
+            food_item['Amount'] = 1
 
             #rearrange dictionary to prep for recipe
             food_item = {
                 'food': food_item['food'],
-                'amount': food_item['amount'],
-                **{k: v for k, v in food_item.items() if k not in ['food', 'amount']}
+                'Amount': food_item['Amount'],
+                **{k: v for k, v in food_item.items() if k not in ['food', 'Amount']}
             }
             self.current_recipe_items.append(food_item)
 
-            print(food_item)
             wx.MessageBox("Added item to the recipe")
         else:
             wx.MessageBox("Invalid row selected.")
@@ -238,7 +240,8 @@ class FoodDataTable(MyFrame2):
         # pass the data to the dialog
         recipe_builder_dialog.current_recipe_name = recipe_name
         recipe_builder_dialog.current_recipe_items = recipe_items
-        recipe_builder_dialog.recipebuilder_name.SetLabel(self.current_recipe_name)
+        recipe_builder_dialog.recipe_summary_value.SetLabel(self.current_recipe_name)
+        recipe_builder_dialog.recipebuilder_name.SetValue(self.current_recipe_name)
         recipe_builder_dialog.setup_grid()
         recipe_builder_dialog.insert_data_into_grid()
 
@@ -249,8 +252,7 @@ class FoodDataTable(MyFrame2):
         self.current_recipe_name = recipe_builder_dialog.current_recipe_name
         self.current_recipe_items = recipe_builder_dialog.current_recipe_items
         self.current_recipe_value.SetLabel(self.current_recipe_name)
-        print(self.current_recipe_name)
-        print(self.current_recipe_items)
+
 
 if __name__ == "__main__":
     app = wx.App()

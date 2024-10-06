@@ -23,7 +23,9 @@ class Recipe(RecipeBuilder):
         if self.current_recipe_items:
             column_names = list(self.current_recipe_items[0].keys())
             self.recipebuilder_added_items_list.ClearGrid()
-            self.recipebuilder_added_items_list.AppendRows(len(self.current_recipe_items))
+
+            if self.recipebuilder_added_items_list.GetNumberRows() < len(self.current_recipe_items):
+                self.recipebuilder_added_items_list.AppendRows(len(self.current_recipe_items) - self.recipebuilder_added_items_list.GetNumberRows())
 
             self.recipebuilder_added_items_list.SetColLabelValue(0, column_names[0])
             for index, column_name in enumerate(column_names):
